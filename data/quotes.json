@@ -1,0 +1,28 @@
+[
+  {
+    "name": "测试客户",
+    "email": "test@example.com",
+    "phone": "13800138000",
+    "company": "测试科技有限公司",
+    "product": "SmartGO-570CPLC",
+    "quantity": "20台",
+    "message": "用于SMT产线焊点检测",
+    "source": "header",
+    "timestamp": "2026-04-09T07:09:29.449Z",
+    "id": "quote_1775718569450",
+    "createdAt": "2026-04-09T07:09:29.685Z"
+  },
+  {
+    "name": "测试客户",
+    "email": "test@example.com",
+    "phone": "13800138000",
+    "company": "",
+    "product": "",
+    "quantity": "",
+    "message": "",
+    "source": "header",
+    "timestamp": "2026-04-09T07:19:30.078Z",
+    "id": "quote_1775719170078",
+    "createdAt": "2026-04-09T07:19:30.096Z"
+  }
+]
