@@ -1,60 +1,69 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Monitor, MonitorPlay, Microscope, Eye, MicroscopeIcon, Brain } from "lucide-react";
+import { Box, Gem, Ruler, Microscope, Eye, Thermometer, Sparkles } from "lucide-react";
 
 const categories = [
   {
     id: 1,
-    name: "HDMI Cameras",
-    icon: Monitor,
-    count: "9",
-    desc: "HD Video Output · Plug & Play · Multi-Resolution",
+    name: "3D Microscopes",
+    icon: Box,
+    count: "6",
+    desc: "3D Viewing · Depth Measurement · Stereoscopic Imaging",
     color: "from-blue-500 to-blue-700",
-    tags: ["1080P", "2K", "4K"],
+    tags: ["3D View", "Depth Field", "Stereo Imaging"],
   },
   {
     id: 2,
-    name: "VGA Cameras",
-    icon: MonitorPlay,
-    count: "1",
-    desc: "Legacy Interface Compatible · Stable & Reliable · Industrial Grade",
-    color: "from-teal-500 to-teal-700",
-    tags: ["VGA Interface", "1280x1024", "High Compatibility"],
+    name: "Metallographic Microscopes",
+    icon: Gem,
+    count: "3",
+    desc: "Material Analysis · Metal Inspection · Research Grade",
+    color: "from-emerald-500 to-emerald-700",
+    tags: ["4K", "DIC", "Polarized Light"],
   },
   {
     id: 3,
-    name: "Digital Microscopes",
-    icon: Microscope,
-    count: "1",
-    desc: "Digital Microscopy · High Magnification · Precision Imaging",
+    name: "Measuring Microscopes",
+    icon: Ruler,
+    count: "3",
+    desc: "Precision Measurement · Dimensional Analysis · AI Powered",
     color: "from-violet-500 to-violet-700",
-    tags: ["4K HD", "Digital Zoom", "Research Grade"],
+    tags: ["Auto Focus", "AI Measurement", "High Precision"],
   },
   {
     id: 4,
-    name: "Vision Inspection",
-    icon: Eye,
-    count: "1",
-    desc: "Industrial Smart Inspection · Auto Recognition · Precision Measurement",
-    color: "from-orange-500 to-orange-700",
-    tags: ["AI Detection", "Automation", "High Precision"],
+    name: "Electronic Microscopes",
+    icon: Microscope,
+    count: "4",
+    desc: "All-in-One Design · Digital Imaging · Industrial Grade",
+    color: "from-cyan-500 to-cyan-700",
+    tags: ["HDMI", "USB", "Deep View"],
   },
   {
     id: 5,
-    name: "Microscope Cameras",
-    icon: MicroscopeIcon,
-    count: "9",
-    desc: "Professional Microscopy · Biomedical · Material Analysis",
-    color: "from-red-500 to-red-700",
-    tags: ["Biological", "Metallurgical", "Medical Grade"],
+    name: "Vision Inspection",
+    icon: Eye,
+    count: "4",
+    desc: "AOI Systems · Smart Cameras · Robot Vision",
+    color: "from-orange-500 to-orange-700",
+    tags: ["AOI", "Smart Vision", "PCB Inspection"],
   },
   {
     id: 6,
-    name: "Smart Cameras",
-    icon: Brain,
-    count: "8",
-    desc: "Built-in AI Processing · Edge Computing · All-in-One Design",
-    color: "from-slate-500 to-slate-700",
-    tags: ["Deep Learning", "Edge Inference", "PC-Free"],
+    name: "Thermal Cameras",
+    icon: Thermometer,
+    count: "2",
+    desc: "Infrared Imaging · Temperature Measurement · Industrial",
+    color: "from-red-500 to-red-700",
+    tags: ["Wireless", "640×512", "-20℃~650℃"],
+  },
+  {
+    id: 7,
+    name: "Specialized Microscopes",
+    icon: Sparkles,
+    count: "2",
+    desc: "SEM · Advanced Optics · Research Applications",
+    color: "from-purple-500 to-purple-700",
+    tags: ["SEM", "Nanometer", "Premium"],
   },
 ];
 
@@ -68,15 +77,15 @@ export function CategorySection() {
             Products
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Full Range of Industrial Cameras
+            Full Range of Microscopy Solutions
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Covering all machine vision applications, from HDMI HD to Smart AI cameras, meeting various industrial inspection needs
+            Comprehensive microscopy and inspection solutions from 3D digital microscopes to advanced SEM systems, meeting various industrial and research needs
           </p>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {categories.map((cat) => {
             const Icon = cat.icon;
             return (

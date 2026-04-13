@@ -16,118 +16,118 @@ import {
 } from "lucide-react";
 
 const solutionData = {
-  title: "AI 智能视觉检测方案",
-  subtitle: "内置深度学习算法，无需 PC 的嵌入式视觉检测方案",
-  desc: "针对工业自动化产线的智能检测需求，提供内置 AI 算法的智能相机，支持缺陷检测、定位识别、尺寸测量，无需外接电脑，即插即用",
+  title: "AI Intelligent Vision Inspection Solutions",
+  subtitle: "Built-in deep learning algorithms, embedded vision inspection without PC",
+  desc: "For intelligent inspection needs in industrial automation production lines, providing smart cameras with built-in AI algorithms, supporting defect detection, positioning recognition, and dimension measurement, no external computer needed, plug and play",
   stats: [
-    { value: "<50ms", label: "检测速度" },
-    { value: "99.5%", label: "检测准确率" },
-    { value: "免 PC", label: "嵌入式方案" },
+    { value: "<50ms", label: "Inspection Speed" },
+    { value: "99.5%", label: "Inspection Accuracy" },
+    { value: "PC-Free", label: "Embedded Solution" },
   ],
   scenarios: [
     {
       id: "defect",
-      title: "缺陷检测",
+      title: "Defect Detection",
       icon: Eye,
-      desc: "自动识别产品表面划痕、污渍、裂纹等缺陷",
+      desc: "Automatically identify scratches, stains, cracks and other defects on product surfaces",
       benefits: [
-        "深度学习算法，自适应多种缺陷",
-        "无需编程，样本训练即可使用",
-        "实时报警，自动分拣",
+        "Deep learning algorithms, adaptive to various defects",
+        "No programming needed, sample training ready to use",
+        "Real-time alarm, automatic sorting",
       ],
-      products: ["SmartGO-570CPLC", "SmartGO-570M", "SmartGO-6MP-BW"],
+      products: ["TVN-SmartGo", "TR-A100", "TVN-9218/9118"],
     },
     {
       id: "positioning",
-      title: "定位识别",
+      title: "Positioning Recognition",
       icon: Target,
-      desc: "精准定位零件位置，引导机器人装配",
+      desc: "Precisely locate part positions to guide robotic assembly",
       benefits: [
-        "定位精度 ±0.05mm",
-        "支持旋转、缩放、遮挡",
-        "多目标同时识别",
+        "Positioning accuracy ±0.05mm",
+        "Support rotation, scaling, occlusion",
+        "Multi-target simultaneous recognition",
       ],
-      products: ["SmartGO-560M", "SmartGO-178CPLC", "SmartGO-130"],
+      products: ["Robot-Vision-Cam", "TVN-SmartGo", "TVN-600II"],
     },
     {
       id: "measurement",
-      title: "尺寸测量",
+      title: "Dimension Measurement",
       icon: Zap,
-      desc: "高精度测量产品尺寸、间距、角度",
+      desc: "High-precision measurement of product dimensions, spacing, and angles",
       benefits: [
-        "亚像素级测量精度",
-        "自动校准补偿",
-        "数据记录追溯",
+        "Sub-pixel measurement accuracy",
+        "Automatic calibration compensation",
+        "Data recording and traceability",
       ],
-      products: ["SmartGO-178CPLC", "Smart-3000M", "SmartGO-3000A"],
+      products: ["TVN-3500AF", "TVN-3800II", "TVN-50MINI"],
     },
   ],
   comparison: [
     {
-      type: "彩色智能相机",
+      type: "Smart Vision Camera",
       icon: Brain,
-      bestFor: "外观检测、颜色识别、复杂场景",
+      bestFor: "Appearance inspection, color recognition, complex scenes",
       features: [
-        "彩色成像，支持颜色分析",
-        "深度学习缺陷检测",
-        "HDMI 输出，可视化调试",
-        "网络接口，远程监控",
+        "Color imaging, support color analysis",
+        "Deep learning defect detection",
+        "HDMI output, visual debugging",
+        "Network interface, remote monitoring",
       ],
       products: [
-        { name: "SmartGO-570CPLC", spec: "1600×1200, AI 检测" },
-        { name: "SmartGO-178CPLC", spec: "3072×1728, 6MP 高清" },
-        { name: "SmartGO-560M", spec: "1280×1024, 定位专用" },
+        { name: "TVN-SmartGo", spec: "1600×1400, Smart Vision" },
+        { name: "TVN-9218/9118", spec: "1920×1080, PCB Inspection" },
+        { name: "TVN-600II", spec: "All-in-One Vision System" },
       ],
     },
     {
-      type: "黑白智能相机",
+      type: "AOI Inspection System",
       icon: Eye,
-      bestFor: "尺寸测量、高速检测、低光照",
+      bestFor: "Automated inspection, batch testing, production lines",
       features: [
-        "黑白成像，对比度更高",
-        "全局快门，无运动模糊",
-        "高帧率，适合高速产线",
-        "低噪声，弱光表现好",
+        "One-button automatic measurement",
+        "High-speed batch inspection",
+        "Multi-industry application",
+        "Compact mini size",
       ],
       products: [
-        { name: "SmartGO-570M", spec: "1600×1400, 黑白检测" },
-        { name: "SmartGO-6MP-BW", spec: "3072×1728, 6MP 黑白" },
-        { name: "SmartGO-560M", spec: "1280×1024, 定位专用" },
+        { name: "TR-A100", spec: "One-button MINI AOI" },
+        { name: "TVN-3500AF", spec: "Auto Focus Measurement" },
+        { name: "TVN-3800II", spec: "Digital Measuring Microscope" },
       ],
     },
   ],
   cases: [
     {
-      company: "某手机零部件供应商",
-      industry: "消费电子",
-      challenge: "金属外壳外观缺陷检测，缺陷类型多，传统算法难以覆盖",
-      solution: "部署 10 台 SmartGO-570CPLC，深度学习缺陷检测",
+      company: "Mobile Phone Component Supplier",
+      industry: "Consumer Electronics",
+      challenge: "Metal casing appearance defect detection, many defect types, traditional algorithms difficult to cover",
+      solution: "Deploy 10 TVN-SmartGo cameras with deep learning defect detection",
       result: [
-        "检测准确率 99.7%",
-        "检测速度 120 件/分钟",
-        "节省质检人员 12 人",
+        "Detection accuracy 99.7%",
+        "Detection speed 120 pieces/minute",
+        "Saved 12 quality inspection personnel",
       ],
     },
     {
-      company: "某汽车零部件厂",
-      industry: "汽车制造",
-      challenge: "发动机零件装配定位，精度要求高，产线节拍快",
-      solution: "SmartGO-560M 定位相机 + 机械手引导系统",
+      company: "Automotive Parts Factory",
+      industry: "Automotive Manufacturing",
+      challenge: "Engine part assembly positioning, high precision requirements, fast production line cycle",
+      solution: "Robot Vision Camera + Robotic Guidance System",
       result: [
-        "定位精度 ±0.03mm",
-        "装配节拍提升至 8 秒/件",
-        "零装配错误",
+        "Positioning accuracy ±0.03mm",
+        "Assembly cycle improved to 8 seconds/piece",
+        "Zero assembly errors",
       ],
     },
     {
-      company: "某精密五金企业",
-      industry: "精密制造",
-      challenge: "小零件尺寸测量，人工测量效率低，误差大",
-      solution: "SmartGO-178CPLC 6MP 相机 + 测量软件",
+      company: "Precision Hardware Enterprise",
+      industry: "Precision Manufacturing",
+      challenge: "Small part dimension measurement, manual measurement low efficiency and large errors",
+      solution: "TVN-3500AF Auto Focus + Measurement Software",
       result: [
-        "测量精度 ±0.01mm",
-        "测量效率提升 10 倍",
-        "CPK 值 > 1.67",
+        "Measurement accuracy ±0.01mm",
+        "Measurement efficiency improved 10x",
+        "CPK value > 1.67",
       ],
     },
   ],
@@ -143,7 +143,7 @@ export default function VisionSolutionPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center max-w-4xl mx-auto">
             <Badge className="bg-green-100 text-green-700 border-green-200 mb-6">
-              行业解决方案
+              Industry Solutions
             </Badge>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
               {solutionData.title}
@@ -167,11 +167,11 @@ export default function VisionSolutionPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Button className="bg-green-600 hover:bg-green-700 h-12 px-8">
                 <Phone className="w-5 h-5 mr-2" />
-                获取方案报价
+                Get Solution Quote
               </Button>
               <Button variant="outline" className="h-12 px-8">
                 <Mail className="w-5 h-5 mr-2" />
-                技术咨询
+                Technical Consultation
               </Button>
             </div>
           </div>
@@ -182,8 +182,8 @@ export default function VisionSolutionPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">检测方案</h2>
-            <p className="text-gray-600">根据您的需求选择合适的方案</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Inspection Solutions</h2>
+            <p className="text-gray-600">Choose the right solution for your needs</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -212,7 +212,7 @@ export default function VisionSolutionPage() {
                     </div>
 
                     <div className="border-t border-gray-100 pt-6">
-                      <h4 className="text-sm font-semibold text-gray-500 mb-3">推荐产品</h4>
+                      <h4 className="text-sm font-semibold text-gray-500 mb-3">Recommended Products</h4>
                       <div className="space-y-2">
                         {item.products.map((product, pidx) => (
                           <div
@@ -233,8 +233,8 @@ export default function VisionSolutionPage() {
 
           {/* Application Scenarios */}
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">应用场景</h3>
-            <p className="text-gray-600">覆盖工业视觉检测核心需求</p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Application Scenarios</h3>
+            <p className="text-gray-600">Covering core industrial vision inspection needs</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -261,7 +261,7 @@ export default function VisionSolutionPage() {
                     </div>
 
                     <div className="pt-4 border-t border-gray-100">
-                      <div className="text-xs text-gray-500 mb-2">推荐产品</div>
+                      <div className="text-xs text-gray-500 mb-2">Recommended Products</div>
                       <div className="flex flex-wrap gap-2">
                         {scenario.products.slice(0, 2).map((product, idx) => (
                           <Badge key={idx} variant="secondary" className="text-xs">
@@ -282,8 +282,8 @@ export default function VisionSolutionPage() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">客户案例</h2>
-            <p className="text-gray-600">真实的应用效果</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Customer Cases</h2>
+            <p className="text-gray-600">Real application results</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -299,17 +299,17 @@ export default function VisionSolutionPage() {
                   
                   <div className="space-y-4 mt-4">
                     <div className="bg-red-50 rounded-lg p-3">
-                      <div className="text-red-600 text-xs mb-1">挑战</div>
+                      <div className="text-red-600 text-xs mb-1">Challenge</div>
                       <div className="text-red-700 text-sm">{caseItem.challenge}</div>
                     </div>
                     
                     <div className="bg-blue-50 rounded-lg p-3">
-                      <div className="text-blue-600 text-xs mb-1">方案</div>
+                      <div className="text-blue-600 text-xs mb-1">Solution</div>
                       <div className="text-blue-700 text-sm">{caseItem.solution}</div>
                     </div>
                     
                     <div className="bg-green-50 rounded-lg p-3">
-                      <div className="text-green-600 text-xs mb-1">效果</div>
+                      <div className="text-green-600 text-xs mb-1">Results</div>
                       <ul className="space-y-1">
                         {caseItem.result.map((res, ridx) => (
                           <li key={ridx} className="text-green-700 text-sm flex items-center gap-1">
@@ -331,22 +331,22 @@ export default function VisionSolutionPage() {
       <section className="py-16 bg-green-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            需要定制化的 AI 视觉方案？
+            Need customized AI vision solutions?
           </h2>
           <p className="text-green-100 mb-8">
-            我们的技术团队可以根据您的检测需求，提供免费的方案设计与算法训练
+            Our technical team can provide free solution design and algorithm training based on your inspection needs
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button className="bg-white text-green-600 hover:bg-gray-100 h-12 px-8">
               <Phone className="w-5 h-5 mr-2" />
-              预约技术演示
+              Schedule Technical Demo
             </Button>
             <Button
               variant="outline"
               className="border-white text-white hover:bg-white/10 h-12 px-8"
             >
               <Mail className="w-5 h-5 mr-2" />
-              在线咨询
+              Online Consultation
             </Button>
           </div>
         </div>

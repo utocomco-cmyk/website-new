@@ -15,118 +15,118 @@ import {
 } from "lucide-react";
 
 const solutionData = {
-  title: "显微镜视觉观测方案",
-  subtitle: "4K 高清成像，数字化显微观测解决方案",
-  desc: "针对生物医疗、材料分析、工业检测等领域的显微观测需求，提供 4K 高清显微镜相机与电子显微镜，支持实时显示、图像采集、测量分析一体化",
+  title: "Microscope Visual Inspection Solutions",
+  subtitle: "4K HD Imaging, Digital Microscopy Solutions",
+  desc: "For microscopy needs in biomedical, material analysis, and industrial inspection, providing 4K HD microscope cameras and digital microscopes with real-time display, image acquisition, and measurement analysis",
   stats: [
-    { value: "4K/1080P", label: "输出分辨率" },
-    { value: "60fps", label: "实时帧率" },
-    { value: "HDMI/USB", label: "输出接口" },
+    { value: "4K/1080P", label: "Output Resolution" },
+    { value: "60fps", label: "Real-time Frame Rate" },
+    { value: "HDMI/USB", label: "Output Interface" },
   ],
   scenarios: [
     {
       id: "biological",
-      title: "生物显微观测",
+      title: "Biological Microscopy",
       icon: Microscope,
-      desc: "细胞、组织、微生物等生物样本的显微观测与记录",
+      desc: "Microscopic observation and recording of cells, tissues, and microorganisms",
       benefits: [
-        "4K 高清成像，细节清晰可见",
-        "实时显示，无延迟观察",
-        "支持图像/视频录制存储",
+        "4K HD imaging with clear details",
+        "Real-time display without delay",
+        "Support image/video recording",
       ],
-      products: ["Smart-4k-80", "Smart-6500", "Smart-6500M"],
+      products: ["TVN-MT4K80", "TVN-600II", "TVN-8008_A"],
     },
     {
       id: "material",
-      title: "材料金相分析",
+      title: "Material Metallographic Analysis",
       icon: Eye,
-      desc: "金属材料、半导体、矿石等样品的金相显微分析",
+      desc: "Metallographic microscopy analysis of metal materials, semiconductors, and minerals",
       benefits: [
-        "高对比度成像，晶粒清晰可见",
-        "支持偏光、暗场等多种观察模式",
-        "测量分析功能，精准定量",
+        "High contrast imaging with clear grains",
+        "Support polarized light, dark field modes",
+        "Measurement analysis functions",
       ],
-      products: ["Smart-6000", "Smart-6000M", "HS-3500M"],
+      products: ["TVN-MT4K80", "TVN-MT60_B", "TVN-50MINI"],
     },
     {
       id: "industrial",
-      title: "工业显微检测",
+      title: "Industrial Microscopic Inspection",
       icon: Monitor,
-      desc: "精密零件、PCB、焊点等工业产品的显微检测",
+      desc: "Microscopic inspection of precision parts, PCBs, and solder joints",
       benefits: [
-        "大景深成像，三维结构清晰",
-        "HDMI 直连显示器，操作便捷",
-        "支持多人同时观测",
+        "Large depth of field imaging",
+        "HDMI direct display for easy operation",
+        "Support multi-person observation",
       ],
-      products: ["HS3500", "Smart-100SE", "Smart-4k-80"],
+      products: ["TVN-360A", "TVN-600", "TVN-9218/9118"],
     },
   ],
   comparison: [
     {
-      type: "4K 高清显微镜相机",
+      type: "4K HD Metallographic Microscope",
       icon: Microscope,
-      bestFor: "科研教学、医疗诊断、精密检测",
+      bestFor: "Scientific research, medical diagnosis, precision inspection",
       features: [
-        "3840×2160 真 4K 分辨率",
-        "HDMI 高清输出，零延迟",
-        "支持鼠标操作、U 盘存储",
-        "C 接口，适配各类显微镜",
+        "3840×2160 true 4K resolution",
+        "HDMI HD output, zero delay",
+        "Support mouse operation, U-disk storage",
+        "C interface, compatible with various microscopes",
       ],
       products: [
-        { name: "Smart-4k-80", spec: "4K 高清显微镜相机" },
-        { name: "Smart-6500", spec: "1080P 显微镜相机" },
-        { name: "Smart-6500M", spec: "黑白显微镜相机" },
+        { name: "TVN-MT4K80", spec: "4K Digital Metallographic Microscope" },
+        { name: "TVN-MT60_B", spec: "Multi-mode Metallographic Microscope" },
+        { name: "TVN-50MINI", spec: "Desktop Measuring Microscope" },
       ],
     },
     {
-      type: "电子显微镜",
+      type: "3D Digital Microscope",
       icon: Eye,
-      bestFor: "便携检测、现场观测、教学演示",
+      bestFor: "Portable inspection, on-site observation, teaching demonstration",
       features: [
-        "一体化设计，无需外接显微镜",
-        "自带光源，即插即用",
-        "支持拍照录像",
-        "轻便便携，灵活部署",
+        "Integrated design, no external microscope needed",
+        "Built-in light source, plug and play",
+        "Support photo and video recording",
+        "Lightweight and portable, flexible deployment",
       ],
       products: [
-        { name: "Smart-6000", spec: "1080P 电子显微镜" },
-        { name: "Smart-6000M", spec: "黑白电子显微镜" },
-        { name: "HS-3500M", spec: "工业电子显微镜" },
+        { name: "TVN-360A", spec: "3D Digital Microscope" },
+        { name: "TVN-800+P3D", spec: "3D Microscope System with Screen" },
+        { name: "TVN-3D9000", spec: "3D Depth Digital Microscope" },
       ],
     },
   ],
   cases: [
     {
-      company: "某三甲医院病理科",
-      industry: "医疗诊断",
-      challenge: "病理切片观测需要多人会诊，传统显微镜难以共享",
-      solution: "部署 Smart-4k-80 4K 显微镜相机，连接大屏显示",
+      company: "Tertiary Hospital Pathology Department",
+      industry: "Medical Diagnosis",
+      challenge: "Pathological slide observation requires multi-person consultation, traditional microscopes difficult to share",
+      solution: "Deploy TVN-MT4K80 4K Metallographic Microscope, connected to large screen display",
       result: [
-        "实现多人同时观测讨论",
-        "诊断效率提升 50%",
-        "支持远程会诊",
+        "Achieve multi-person simultaneous observation",
+        "Diagnosis efficiency improved by 50%",
+        "Support remote consultation",
       ],
     },
     {
-      company: "某高校材料学院",
-      industry: "科研教学",
-      challenge: "金相实验教学，学生轮流观察效率低",
-      solution: "Smart-6500 显微镜相机 + 投影仪，实时投屏",
+      company: "University Materials Science College",
+      industry: "Scientific Research Education",
+      challenge: "Metallographic experiment teaching, students taking turns to observe with low efficiency",
+      solution: "TVN-MT4K80 Microscope + Projector for real-time screen casting",
       result: [
-        "全班同步观察，教学效率提升",
-        "支持图像采集，实验报告更专业",
-        "学生满意度提升 90%",
+        "Whole class synchronized observation, teaching efficiency improved",
+        "Support image acquisition for more professional experiment reports",
+        "Student satisfaction increased by 90%",
       ],
     },
     {
-      company: "某半导体检测企业",
-      industry: "工业检测",
-      challenge: "芯片表面缺陷检测，需要高清成像和数据记录",
-      solution: "HS-3500M 工业显微镜 + 测量软件",
+      company: "Semiconductor Inspection Enterprise",
+      industry: "Industrial Inspection",
+      challenge: "Chip surface defect detection requires HD imaging and data recording",
+      solution: "TVN-360A 3D Microscope + Measurement Software",
       result: [
-        "缺陷识别率提升至 99.5%",
-        "检测数据自动保存追溯",
-        "通过 ISO 质量体系认证",
+        "Defect recognition rate increased to 99.5%",
+        "Detection data automatically saved and traceable",
+        "Passed ISO quality system certification",
       ],
     },
   ],
@@ -142,7 +142,7 @@ export default function MicroscopeSolutionPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center max-w-4xl mx-auto">
             <Badge className="bg-purple-100 text-purple-700 border-purple-200 mb-6">
-              行业解决方案
+              Industry Solutions
             </Badge>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
               {solutionData.title}
@@ -166,11 +166,11 @@ export default function MicroscopeSolutionPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Button className="bg-purple-600 hover:bg-purple-700 h-12 px-8">
                 <Phone className="w-5 h-5 mr-2" />
-                获取方案报价
+                Get Solution Quote
               </Button>
               <Button variant="outline" className="h-12 px-8">
                 <Mail className="w-5 h-5 mr-2" />
-                技术咨询
+                Technical Consultation
               </Button>
             </div>
           </div>
@@ -181,8 +181,8 @@ export default function MicroscopeSolutionPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">检测方案</h2>
-            <p className="text-gray-600">根据您的需求选择合适的方案</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Inspection Solutions</h2>
+            <p className="text-gray-600">Choose the right solution for your needs</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -211,7 +211,7 @@ export default function MicroscopeSolutionPage() {
                     </div>
 
                     <div className="border-t border-gray-100 pt-6">
-                      <h4 className="text-sm font-semibold text-gray-500 mb-3">推荐产品</h4>
+                      <h4 className="text-sm font-semibold text-gray-500 mb-3">Recommended Products</h4>
                       <div className="space-y-2">
                         {item.products.map((product, pidx) => (
                           <div
@@ -232,8 +232,8 @@ export default function MicroscopeSolutionPage() {
 
           {/* Application Scenarios */}
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">应用场景</h3>
-            <p className="text-gray-600">覆盖显微观测核心应用领域</p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Application Scenarios</h3>
+            <p className="text-gray-600">Covering core microscopy application fields</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -260,7 +260,7 @@ export default function MicroscopeSolutionPage() {
                     </div>
 
                     <div className="pt-4 border-t border-gray-100">
-                      <div className="text-xs text-gray-500 mb-2">推荐产品</div>
+                      <div className="text-xs text-gray-500 mb-2">Recommended Products</div>
                       <div className="flex flex-wrap gap-2">
                         {scenario.products.slice(0, 2).map((product, idx) => (
                           <Badge key={idx} variant="secondary" className="text-xs">
@@ -281,8 +281,8 @@ export default function MicroscopeSolutionPage() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">客户案例</h2>
-            <p className="text-gray-600">真实的应用效果</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Customer Cases</h2>
+            <p className="text-gray-600">Real application results</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -298,17 +298,17 @@ export default function MicroscopeSolutionPage() {
                   
                   <div className="space-y-4 mt-4">
                     <div className="bg-red-50 rounded-lg p-3">
-                      <div className="text-red-600 text-xs mb-1">挑战</div>
+                      <div className="text-red-600 text-xs mb-1">Challenge</div>
                       <div className="text-red-700 text-sm">{caseItem.challenge}</div>
                     </div>
                     
                     <div className="bg-blue-50 rounded-lg p-3">
-                      <div className="text-blue-600 text-xs mb-1">方案</div>
+                      <div className="text-blue-600 text-xs mb-1">Solution</div>
                       <div className="text-blue-700 text-sm">{caseItem.solution}</div>
                     </div>
                     
                     <div className="bg-green-50 rounded-lg p-3">
-                      <div className="text-green-600 text-xs mb-1">效果</div>
+                      <div className="text-green-600 text-xs mb-1">Results</div>
                       <ul className="space-y-1">
                         {caseItem.result.map((res, ridx) => (
                           <li key={ridx} className="text-green-700 text-sm flex items-center gap-1">
@@ -330,22 +330,22 @@ export default function MicroscopeSolutionPage() {
       <section className="py-16 bg-purple-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            需要定制化的显微观测方案？
+            Need customized microscopy solutions?
           </h2>
           <p className="text-purple-100 mb-8">
-            我们的技术团队可以根据您的观测需求，提供免费的方案设计与产品试用
+            Our technical team can provide free solution design and product trials based on your observation needs
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button className="bg-white text-purple-600 hover:bg-gray-100 h-12 px-8">
               <Phone className="w-5 h-5 mr-2" />
-              预约技术演示
+              Schedule Technical Demo
             </Button>
             <Button
               variant="outline"
               className="border-white text-white hover:bg-white/10 h-12 px-8"
             >
               <Mail className="w-5 h-5 mr-2" />
-              在线咨询
+              Online Consultation
             </Button>
           </div>
         </div>
