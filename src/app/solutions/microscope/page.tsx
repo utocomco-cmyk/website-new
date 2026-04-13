@@ -34,7 +34,7 @@ const solutionData = {
         "Real-time display without delay",
         "Support image/video recording",
       ],
-      products: ["TVN-MT4K80", "TVN-600II", "TVN-8008_A"],
+      products: ["UT-MT4K80", "UT-600II", "UT-8008_A"],
     },
     {
       id: "material",
@@ -46,7 +46,7 @@ const solutionData = {
         "Support polarized light, dark field modes",
         "Measurement analysis functions",
       ],
-      products: ["TVN-MT4K80", "TVN-MT60_B", "TVN-50MINI"],
+      products: ["UT-MT4K80", "UT-MT60_B", "UT-50MINI"],
     },
     {
       id: "industrial",
@@ -58,7 +58,7 @@ const solutionData = {
         "HDMI direct display for easy operation",
         "Support multi-person observation",
       ],
-      products: ["TVN-360A", "TVN-600", "TVN-9218/9118"],
+      products: ["UT-360A", "UT-600", "UT-9218/9118"],
     },
   ],
   comparison: [
@@ -73,9 +73,9 @@ const solutionData = {
         "C interface, compatible with various microscopes",
       ],
       products: [
-        { name: "TVN-MT4K80", spec: "4K Digital Metallographic Microscope" },
-        { name: "TVN-MT60_B", spec: "Multi-mode Metallographic Microscope" },
-        { name: "TVN-50MINI", spec: "Desktop Measuring Microscope" },
+        { name: "UT-MT4K80", spec: "4K Digital Metallographic Microscope" },
+        { name: "UT-MT60_B", spec: "Multi-mode Metallographic Microscope" },
+        { name: "UT-50MINI", spec: "Desktop Measuring Microscope" },
       ],
     },
     {
@@ -89,9 +89,9 @@ const solutionData = {
         "Lightweight and portable, flexible deployment",
       ],
       products: [
-        { name: "TVN-360A", spec: "3D Digital Microscope" },
-        { name: "TVN-800+P3D", spec: "3D Microscope System with Screen" },
-        { name: "TVN-3D9000", spec: "3D Depth Digital Microscope" },
+        { name: "UT-360A", spec: "3D Digital Microscope" },
+        { name: "UT-800+P3D", spec: "3D Microscope System with Screen" },
+        { name: "UT-3D9000", spec: "3D Depth Digital Microscope" },
       ],
     },
   ],
@@ -100,7 +100,7 @@ const solutionData = {
       company: "Tertiary Hospital Pathology Department",
       industry: "Medical Diagnosis",
       challenge: "Pathological slide observation requires multi-person consultation, traditional microscopes difficult to share",
-      solution: "Deploy TVN-MT4K80 4K Metallographic Microscope, connected to large screen display",
+      solution: "Deploy UT-MT4K80 4K Metallographic Microscope, connected to large screen display",
       result: [
         "Achieve multi-person simultaneous observation",
         "Diagnosis efficiency improved by 50%",
@@ -111,7 +111,7 @@ const solutionData = {
       company: "University Materials Science College",
       industry: "Scientific Research Education",
       challenge: "Metallographic experiment teaching, students taking turns to observe with low efficiency",
-      solution: "TVN-MT4K80 Microscope + Projector for real-time screen casting",
+      solution: "UT-MT4K80 Microscope + Projector for real-time screen casting",
       result: [
         "Whole class synchronized observation, teaching efficiency improved",
         "Support image acquisition for more professional experiment reports",
@@ -122,7 +122,7 @@ const solutionData = {
       company: "Semiconductor Inspection Enterprise",
       industry: "Industrial Inspection",
       challenge: "Chip surface defect detection requires HD imaging and data recording",
-      solution: "TVN-360A 3D Microscope + Measurement Software",
+      solution: "UT-360A 3D Microscope + Measurement Software",
       result: [
         "Defect recognition rate increased to 99.5%",
         "Detection data automatically saved and traceable",

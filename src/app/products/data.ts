@@ -34,13 +34,13 @@ export const categories = [
   { id: "specialized-microscope", name: "Specialized Microscopes", count: 2 },
 ];
 
-// 24 New Products from troysupply_products_detailed.xlsx
+// 24 New Products from UT brand (updated from TVN to UT)
 export const products: Product[] = [
   // ========== 3D Microscopes (6 products) ==========
   {
     id: 1,
     name: "3D View Electric Microscope",
-    model: "TVN-2K30/4K30-EP3D_B",
+    model: "UT-2K30/4K30-EP3D_B",
     category: "3d-microscope",
     subCategory: "3D Digital Microscope",
     resolution: "2K/4K",
@@ -53,13 +53,13 @@ export const products: Product[] = [
     badgeColor: "bg-green-500",
     rating: 4.8,
     reviews: 128,
-    image: "/images/products/tvn-2k30-4k30-ep3d-b/main.jpg",
+    image: "/images/products/ut-2k30-4k30-ep3d-b/main.jpg",
     images: [
-      "/images/products/tvn-2k30-4k30-ep3d-b/main.jpg",
-      "/images/products/tvn-2k30-4k30-ep3d-b/detail1.jpg",
-      "/images/products/tvn-2k30-4k30-ep3d-b/detail2.jpg",
+      "/images/products/ut-2k30-4k30-ep3d-b/main.jpg",
+      "/images/products/ut-2k30-4k30-ep3d-b/detail1.jpg",
+      "/images/products/ut-2k30-4k30-ep3d-b/detail2.jpg",
     ],
-    description: "The TVN-2K30/4K30 high-definition industrial camera features a built-in personalized interface editing function, template application, mouse operation, USB flash drive storage, and includes functions such as automatic edge finding, automatic contouring, horizontal and vertical flipping, line/circle calibration, data export, and playback browsing.",
+    description: "The UT-2K30/4K30 high-definition industrial camera features a built-in personalized interface editing function, template application, mouse operation, USB flash drive storage, and includes functions such as automatic edge finding, automatic contouring, horizontal and vertical flipping, line/circle calibration, data export, and playback browsing.",
     features: [
       "2K/4K High Resolution",
       "Personalized interface editing",
@@ -71,7 +71,7 @@ export const products: Product[] = [
       "Multiple measurement tools",
     ],
     specs: {
-      "Model": "TVN-2K30/4K30-EP3D_B",
+      "Model": "UT-2K30/4K30-EP3D_B",
       "Resolution": "2K/4K",
       "Frame Rate": "30fps",
       "Interface": "HDMI, USB",
@@ -85,7 +85,7 @@ export const products: Product[] = [
   {
     id: 2,
     name: "3D View Type Electric Microscope",
-    model: "TVN-8008_A",
+    model: "UT-8008_A",
     category: "3d-microscope",
     subCategory: "3D Digital Microscope",
     resolution: "1920 x 1080",
@@ -96,10 +96,10 @@ export const products: Product[] = [
     priceNum: 0,
     rating: 4.7,
     reviews: 96,
-    image: "/images/products/tvn-8008-a/main.jpg",
+    image: "/images/products/ut-8008-a/main.jpg",
     images: [
-      "/images/products/tvn-8008-a/main.jpg",
-      "/images/products/tvn-8008-a/detail1.jpg",
+      "/images/products/ut-8008-a/main.jpg",
+      "/images/products/ut-8008-a/detail1.jpg",
     ],
     description: "Multi-function digital microscope with 3D viewing capability. Features HDMI output, dual USB ports, and C-Mount lens interface for versatile industrial inspection.",
     features: [
@@ -111,7 +111,7 @@ export const products: Product[] = [
       "Multi-function design",
     ],
     specs: {
-      "Model": "TVN-8008_A",
+      "Model": "UT-8008_A",
       "Resolution": "1920 x 1080",
       "Video Port": "HDMI",
       "Color": "Color",
@@ -127,7 +127,7 @@ export const products: Product[] = [
   {
     id: 3,
     name: "3D Digital Microscope",
-    model: "TVN-360A",
+    model: "UT-360A",
     category: "3d-microscope",
     subCategory: "3D Digital Microscope",
     resolution: "HD",
@@ -140,10 +140,10 @@ export const products: Product[] = [
     badgeColor: "bg-red-500",
     rating: 4.9,
     reviews: 215,
-    image: "/images/products/tvn-360a/main.jpg",
+    image: "/images/products/ut-360a/main.jpg",
     images: [
-      "/images/products/tvn-360a/main.jpg",
-      "/images/products/tvn-360a/detail1.jpg",
+      "/images/products/ut-360a/main.jpg",
+      "/images/products/ut-360a/detail1.jpg",
     ],
     description: "3D Digital Microscope with three-dimensional viewing. Features 0.7-4.5X optical magnification, frame freeze, image comparison, strong light suppression, and edge enhancement.",
     features: [
@@ -157,7 +157,7 @@ export const products: Product[] = [
       "Auto white balance & exposure",
     ],
     specs: {
-      "Model": "TVN-360A",
+      "Model": "UT-360A",
       "Optical Magnification": "0.7-4.5X",
       "Frame Rate": "60fps",
       "Control": "Mouse operation",
@@ -170,7 +170,7 @@ export const products: Product[] = [
   {
     id: 4,
     name: "3D Depth Digital Microscope",
-    model: "TVN-3D9000",
+    model: "UT-3D9000",
     category: "3d-microscope",
     subCategory: "3D Depth Microscope",
     resolution: "HD",
@@ -183,12 +183,12 @@ export const products: Product[] = [
     badgeColor: "bg-green-500",
     rating: 4.8,
     reviews: 87,
-    image: "/images/products/tvn-3d9000/main.jpg",
+    image: "/images/products/ut-3d9000/main.jpg",
     images: [
-      "/images/products/tvn-3d9000/main.jpg",
-      "/images/products/tvn-3d9000/detail1.jpg",
+      "/images/products/ut-3d9000/main.jpg",
+      "/images/products/ut-3d9000/detail1.jpg",
     ],
-    description: "TVN-3D9000 with 3D deep view measuring features. High-quality optical system with HD lens, multiple objective selection, stereoscopic 3D imaging, and high-precision measurement.",
+    description: "UT-3D9000 with 3D deep view measuring features. High-quality optical system with HD lens, multiple objective selection, stereoscopic 3D imaging, and high-precision measurement.",
     features: [
       "High-quality optical system",
       "HD lens",
@@ -198,7 +198,7 @@ export const products: Product[] = [
       "Quality assurance",
     ],
     specs: {
-      "Model": "TVN-3D9000",
+      "Model": "UT-3D9000",
       "Optical System": "High-quality",
       "Lens": "HD",
       "Objectives": "Multiple selection",
@@ -211,7 +211,7 @@ export const products: Product[] = [
   {
     id: 5,
     name: "3D Digital Microscope System",
-    model: "TVN-800+P3D",
+    model: "UT-800+P3D",
     category: "3d-microscope",
     subCategory: "3D Digital Microscope",
     resolution: "HD",
@@ -222,10 +222,10 @@ export const products: Product[] = [
     priceNum: 0,
     rating: 4.7,
     reviews: 64,
-    image: "/images/products/tvn-800-p3d/main.jpg",
+    image: "/images/products/ut-800-p3d/main.jpg",
     images: [
-      "/images/products/tvn-800-p3d/main.jpg",
-      "/images/products/tvn-800-p3d/detail1.jpg",
+      "/images/products/ut-800-p3d/main.jpg",
+      "/images/products/ut-800-p3d/detail1.jpg",
     ],
     description: "Complete 3D Digital Microscope system including 13-inch screen, lens, LED light, processing unit, and all necessary accessories.",
     features: [
@@ -236,7 +236,7 @@ export const products: Product[] = [
       "Ready to use",
     ],
     specs: {
-      "Model": "TVN-800+P3D",
+      "Model": "UT-800+P3D",
       "Screen": "13 inch",
       "Components": "Lens, LED light, processing unit",
       "Accessories": "DC power cable, mouse, HDMI cable",
@@ -247,7 +247,7 @@ export const products: Product[] = [
   {
     id: 6,
     name: "Manual 3D Microscope",
-    model: "TVN-800_3D",
+    model: "UT-800_3D",
     category: "3d-microscope",
     subCategory: "3D Manual Microscope",
     resolution: "HD",
@@ -260,10 +260,10 @@ export const products: Product[] = [
     badgeColor: "bg-red-500",
     rating: 4.8,
     reviews: 142,
-    image: "/images/products/tvn-800-3d/main.jpg",
+    image: "/images/products/ut-800-3d/main.jpg",
     images: [
-      "/images/products/tvn-800-3d/main.jpg",
-      "/images/products/tvn-800-3d/detail1.jpg",
+      "/images/products/ut-800-3d/main.jpg",
+      "/images/products/ut-800-3d/detail1.jpg",
     ],
     description: "Microscope 3D View with LED ring light source, automatic edge finding, automatic circle finding, picture and data save/export, zoom without blur.",
     features: [
@@ -276,7 +276,7 @@ export const products: Product[] = [
       "Zoom without blur",
     ],
     specs: {
-      "Model": "TVN-800_3D",
+      "Model": "UT-800_3D",
       "Light Source": "LED ring light",
       "Functions": "Auto edge/circle finding",
       "Storage": "Picture and data save/export",
@@ -289,7 +289,7 @@ export const products: Product[] = [
   {
     id: 7,
     name: "Metallographic Tool Microscope",
-    model: "TVN-50MINI",
+    model: "UT-50MINI",
     category: "metallographic-microscope",
     subCategory: "Metallographic Microscope",
     resolution: "High-definition",
@@ -302,10 +302,10 @@ export const products: Product[] = [
     badgeColor: "bg-green-500",
     rating: 4.9,
     reviews: 78,
-    image: "/images/products/tvn-50mini/main.jpg",
+    image: "/images/products/ut-50mini/main.jpg",
     images: [
-      "/images/products/tvn-50mini/main.jpg",
-      "/images/products/tvn-50mini/detail1.jpg",
+      "/images/products/ut-50mini/main.jpg",
+      "/images/products/ut-50mini/detail1.jpg",
     ],
     description: "Desktop Metallographic Measuring Microscope combining high magnification with X, Y, and Z dimensional measurement capabilities. Multifunctional measuring instrument with high-precision linear measurement and observation.",
     features: [
@@ -316,7 +316,7 @@ export const products: Product[] = [
       "Desktop form factor",
     ],
     specs: {
-      "Model": "TVN-50MINI",
+      "Model": "UT-50MINI",
       "Resolution": "High-definition",
       "Measurement": "X, Y, Z dimensional",
       "Function": "High-precision linear measurement",
@@ -327,7 +327,7 @@ export const products: Product[] = [
   {
     id: 8,
     name: "Digital Metallographic Microscope",
-    model: "TVN-MT4K80",
+    model: "UT-MT4K80",
     category: "metallographic-microscope",
     subCategory: "Digital Metallographic Microscope",
     resolution: "4K",
@@ -340,10 +340,10 @@ export const products: Product[] = [
     badgeColor: "bg-blue-500",
     rating: 4.8,
     reviews: 156,
-    image: "/images/products/tvn-mt4k80/main.jpg",
+    image: "/images/products/ut-mt4k80/main.jpg",
     images: [
-      "/images/products/tvn-mt4k80/main.jpg",
-      "/images/products/tvn-mt4k80/detail1.jpg",
+      "/images/products/ut-mt4k80/main.jpg",
+      "/images/products/ut-mt4k80/detail1.jpg",
     ],
     description: "Digital metallographic microscope for high-end manufacturing and research. Features 4K resolution, high-power LED lighting with reflection and transmission, bright field, dark field, DIC, and polarized light observations.",
     features: [
@@ -357,7 +357,7 @@ export const products: Product[] = [
       "Ergonomic design",
     ],
     specs: {
-      "Model": "TVN-MT4K80",
+      "Model": "UT-MT4K80",
       "Resolution": "4K",
       "Lighting": "High-power LED",
       "Lighting Forms": "Reflection and transmission",
@@ -369,7 +369,7 @@ export const products: Product[] = [
   {
     id: 9,
     name: "Digital Metallographic Microscope",
-    model: "TVN-MT60_B",
+    model: "UT-MT60_B",
     category: "metallographic-microscope",
     subCategory: "Digital Metallographic Microscope",
     resolution: "HD",
@@ -380,10 +380,10 @@ export const products: Product[] = [
     priceNum: 0,
     rating: 4.7,
     reviews: 92,
-    image: "/images/products/tvn-mt60-b/main.jpg",
+    image: "/images/products/ut-mt60-b/main.jpg",
     images: [
-      "/images/products/tvn-mt60-b/main.jpg",
-      "/images/products/tvn-mt60-b/detail1.jpg",
+      "/images/products/ut-mt60-b/main.jpg",
+      "/images/products/ut-mt60-b/detail1.jpg",
     ],
     description: "Electron Metallographic Digital Microscope with stable atmosphere and flexible operation. Integrates bright field, dark field, polarized light, and DIC differential interference observation functions.",
     features: [
@@ -395,7 +395,7 @@ export const products: Product[] = [
       "DIC differential interference",
     ],
     specs: {
-      "Model": "TVN-MT60_B",
+      "Model": "UT-MT60_B",
       "Observation Functions": "Bright field, dark field, polarized light, DIC",
     },
     inStock: true,
@@ -406,7 +406,7 @@ export const products: Product[] = [
   {
     id: 10,
     name: "AI Image Measuring Instrument",
-    model: "AI-Image-Measure",
+    model: "UT-AI300CNC",
     category: "measuring-microscope",
     subCategory: "AI Measuring Instrument",
     resolution: "High-definition",
@@ -419,10 +419,10 @@ export const products: Product[] = [
     badgeColor: "bg-violet-500",
     rating: 4.9,
     reviews: 68,
-    image: "/images/products/ai-image-measure/main.jpg",
+    image: "/images/products/ut-ai300cnc/main.jpg",
     images: [
-      "/images/products/ai-image-measure/main.jpg",
-      "/images/products/ai-image-measure/detail1.jpg",
+      "/images/products/ut-ai300cnc/main.jpg",
+      "/images/products/ut-ai300cnc/detail1.jpg",
     ],
     description: "AI Image Measuring Instrument with AI-guided intelligent capture and edge grabbing algorithms. Automatic recognition and measurement of all surface feature boundaries for high-end manufacturing.",
     features: [
@@ -434,7 +434,7 @@ export const products: Product[] = [
       "High-end manufacturing ready",
     ],
     specs: {
-      "Model": "AI Image Measuring Instrument",
+      "Model": "UT-AI300CNC",
       "Technology": "AI-guided intelligent capture",
       "Algorithm": "Edge grabbing algorithms",
       "Function": "Automatic recognition and measurement",
@@ -445,7 +445,7 @@ export const products: Product[] = [
   {
     id: 11,
     name: "Autofocus Digital Microscope",
-    model: "TVN-3500AF",
+    model: "UT-3500AF",
     category: "measuring-microscope",
     subCategory: "Autofocus Microscope",
     resolution: "HD",
@@ -458,10 +458,10 @@ export const products: Product[] = [
     badgeColor: "bg-red-500",
     rating: 4.8,
     reviews: 203,
-    image: "/images/products/tvn-3500af/main.jpg",
+    image: "/images/products/ut-3500af/main.jpg",
     images: [
-      "/images/products/tvn-3500af/main.jpg",
-      "/images/products/tvn-3500af/detail1.jpg",
+      "/images/products/ut-3500af/main.jpg",
+      "/images/products/ut-3500af/detail1.jpg",
     ],
     description: "Autofocus Digital Microscope with built-in precision optical focusing system. Real-time auto-focus with fast software algorithm, no manual adjustment needed within adjustable range.",
     features: [
@@ -473,7 +473,7 @@ export const products: Product[] = [
       "Precise picture rendering",
     ],
     specs: {
-      "Model": "TVN-3500AF",
+      "Model": "UT-3500AF",
       "Focusing System": "Built-in precision optical",
       "Algorithm": "Fast software algorithm",
       "Focus": "Real-time auto-focus",
@@ -484,44 +484,47 @@ export const products: Product[] = [
   {
     id: 12,
     name: "Digital Measuring Microscope",
-    model: "TVN-3800II",
+    model: "UT-600II_A",
     category: "measuring-microscope",
     subCategory: "Digital Measuring Microscope",
     resolution: "HD",
-    interface: "HDMI",
+    interface: "Ethernet",
     shutter: "Rolling Shutter",
     fps: "60fps",
     price: "Contact Us",
     priceNum: 0,
-    rating: 4.7,
-    reviews: 115,
-    image: "/images/products/tvn-3800ii/main.jpg",
+    badge: "Hot",
+    badgeColor: "bg-red-500",
+    rating: 4.8,
+    reviews: 156,
+    image: "/images/products/ut-600ii-a/main.jpg",
     images: [
-      "/images/products/tvn-3800ii/main.jpg",
-      "/images/products/tvn-3800ii/detail1.jpg",
+      "/images/products/ut-600ii-a/main.jpg",
+      "/images/products/ut-600ii-a/detail1.jpg",
     ],
-    description: "Video microscope solution for industrial inspection. Ergonomic design focusing on operator comfort and wafer safety for successful integration into production lines.",
+    description: "Electric Microscope with flashlight function, depth of field synthesis, light source shielding, and Ethernet port for convenient picture transfer.",
     features: [
-      "Video microscope solution",
-      "Ergonomic design",
-      "Operator comfort focused",
-      "Wafer safety features",
-      "Production line integration",
+      "Flashlight function for unclear fonts",
+      "Depth of field synthesis",
+      "Light source shielding for FPC boards",
+      "Ethernet port for picture transfer",
+      "PCBA chip inspection",
+      "FPC board observation",
     ],
     specs: {
-      "Model": "TVN-3800II",
-      "Type": "Video measuring microscope",
-      "Ergonomic Design": "Yes",
+      "Model": "UT-600II_A",
+      "Functions": "Flashlight, Depth of field synthesis, Light source shielding",
+      "Interface": "Ethernet port",
     },
     inStock: true,
-    detailUrl: "https://www.troysupply.com/china-top-of-digital-measuring-microscope-tvn-3800ii_p391.html",
+    detailUrl: "https://www.troysupply.com/world-top-of-depth-of-field-microscope-tvn-600ii_p474.html",
   },
 
   // ========== Electronic Microscopes (4 products) ==========
   {
     id: 13,
     name: "All-in-One Digital Microscope",
-    model: "TVN-600II",
+    model: "UT-600II",
     category: "electronic-microscope",
     subCategory: "All-in-One Microscope",
     resolution: "HD",
@@ -534,10 +537,10 @@ export const products: Product[] = [
     badgeColor: "bg-green-500",
     rating: 4.8,
     reviews: 178,
-    image: "/images/products/tvn-600ii/main.jpg",
+    image: "/images/products/ut-600ii/main.jpg",
     images: [
-      "/images/products/tvn-600ii/main.jpg",
-      "/images/products/tvn-600ii/detail1.jpg",
+      "/images/products/ut-600ii/main.jpg",
+      "/images/products/ut-600ii/detail1.jpg",
     ],
     description: "All-in-one digital microscope with magnification knob, ring light source, up and down adjustment, and USB mouse operation with U disk storage.",
     features: [
@@ -550,7 +553,7 @@ export const products: Product[] = [
       "U disk storage",
     ],
     specs: {
-      "Model": "TVN-600II",
+      "Model": "UT-600II",
       "Magnification": "Adjustable knob",
       "Light Source": "Ring light",
       "Adjustment": "Up and down knob",
@@ -563,7 +566,7 @@ export const products: Product[] = [
   {
     id: 14,
     name: "Electronic Microscope",
-    model: "TR-MS8001",
+    model: "UT-MS8001",
     category: "electronic-microscope",
     subCategory: "Electronic Microscope",
     resolution: "HD",
@@ -574,10 +577,10 @@ export const products: Product[] = [
     priceNum: 0,
     rating: 4.6,
     reviews: 89,
-    image: "/images/products/tr-ms8001/main.jpg",
+    image: "/images/products/ut-ms8001/main.jpg",
     images: [
-      "/images/products/tr-ms8001/main.jpg",
-      "/images/products/tr-ms8001/detail1.jpg",
+      "/images/products/ut-ms8001/main.jpg",
+      "/images/products/ut-ms8001/detail1.jpg",
     ],
     description: "Electron Microscope for PCB board inspection, QC department, and university education. Versatile and reliable for various inspection applications.",
     features: [
@@ -587,7 +590,7 @@ export const products: Product[] = [
       "Versatile applications",
     ],
     specs: {
-      "Model": "TR-MS8001",
+      "Model": "UT-MS8001",
       "Application": "PCB inspection, QC, education",
     },
     inStock: true,
@@ -596,7 +599,7 @@ export const products: Product[] = [
   {
     id: 15,
     name: "Industrial Electronic Microscope",
-    model: "TVN-600",
+    model: "UT-600",
     category: "electronic-microscope",
     subCategory: "Industrial Electronic Microscope",
     resolution: "HD",
@@ -609,10 +612,10 @@ export const products: Product[] = [
     badgeColor: "bg-red-500",
     rating: 4.8,
     reviews: 234,
-    image: "/images/products/tvn-600/main.jpg",
+    image: "/images/products/ut-600/main.jpg",
     images: [
-      "/images/products/tvn-600/main.jpg",
-      "/images/products/tvn-600/detail1.jpg",
+      "/images/products/ut-600/main.jpg",
+      "/images/products/ut-600/detail1.jpg",
     ],
     description: "Electronic Microscope for Inspection & Measuring with graphic overlay, HDMI camera, and video microscope functionality. Designed for PCB board inspection.",
     features: [
@@ -623,7 +626,7 @@ export const products: Product[] = [
       "PCB board inspection ready",
     ],
     specs: {
-      "Model": "TVN-600",
+      "Model": "UT-600",
       "Features": "Graphic overlay, HDMI camera, video microscope",
       "Application": "Inspection and measuring",
     },
@@ -633,7 +636,7 @@ export const products: Product[] = [
   {
     id: 16,
     name: "Deep View Electronic Microscope",
-    model: "TVN-S6000NMX",
+    model: "UT-S6000NMX",
     category: "electronic-microscope",
     subCategory: "Deep View Microscope",
     resolution: "1920 x 1080",
@@ -644,10 +647,10 @@ export const products: Product[] = [
     priceNum: 0,
     rating: 4.7,
     reviews: 76,
-    image: "/images/products/tvn-s6000nmx/main.jpg",
+    image: "/images/products/ut-s6000nmx/main.jpg",
     images: [
-      "/images/products/tvn-s6000nmx/main.jpg",
-      "/images/products/tvn-s6000nmx/detail1.jpg",
+      "/images/products/ut-s6000nmx/main.jpg",
+      "/images/products/ut-s6000nmx/detail1.jpg",
     ],
     description: "Electronic Microscope with deep view capability for detailed inspection. Features high resolution 1920x1080, high frame rate 60fps, and large 1/1.2 inch sensor.",
     features: [
@@ -658,7 +661,7 @@ export const products: Product[] = [
       "Network interface",
     ],
     specs: {
-      "Model": "TVN-S6000NMX",
+      "Model": "UT-S6000NMX",
       "Resolution": "1920 x 1080",
       "Frame Rate": "60fps",
       "Optical Size": "1/1.2\"",
@@ -672,7 +675,7 @@ export const products: Product[] = [
   {
     id: 17,
     name: "One-button MINI AOI Machine",
-    model: "TR-A100",
+    model: "UT-A100",
     category: "vision-inspection",
     subCategory: "AOI Machine",
     resolution: "High-definition",
@@ -685,10 +688,10 @@ export const products: Product[] = [
     badgeColor: "bg-green-500",
     rating: 4.8,
     reviews: 145,
-    image: "/images/products/tr-a100/main.jpg",
+    image: "/images/products/ut-a100/main.jpg",
     images: [
-      "/images/products/tr-a100/main.jpg",
-      "/images/products/tr-a100/detail1.jpg",
+      "/images/products/ut-a100/main.jpg",
+      "/images/products/ut-a100/detail1.jpg",
     ],
     description: "One-button measuring Mini AOI widely used in machinery, electronics, mold making, injection molding, metals, rubber, low-voltage electrical appliances, and more.",
     features: [
@@ -699,7 +702,7 @@ export const products: Product[] = [
       "Wide industry application",
     ],
     specs: {
-      "Model": "TR-A100",
+      "Model": "UT-A100",
       "Type": "One-button measuring AOI",
       "Measurement": "Automatic",
     },
@@ -709,7 +712,7 @@ export const products: Product[] = [
   {
     id: 18,
     name: "Smart Vision Camera",
-    model: "TVN-SmartGo",
+    model: "UT-SmartGo",
     category: "vision-inspection",
     subCategory: "Smart Vision Camera",
     resolution: "1600 x 1400",
@@ -722,10 +725,10 @@ export const products: Product[] = [
     badgeColor: "bg-violet-500",
     rating: 4.9,
     reviews: 312,
-    image: "/images/products/tvn-smartgo/main.jpg",
+    image: "/images/products/ut-smartgo/main.jpg",
     images: [
-      "/images/products/tvn-smartgo/main.jpg",
-      "/images/products/tvn-smartgo/detail1.jpg",
+      "/images/products/ut-smartgo/main.jpg",
+      "/images/products/ut-smartgo/detail1.jpg",
     ],
     description: "Smart Vision Inspection Camera with multiple interfaces and storage options. Features color/black and white modes, HDMI output, and U-disk storage.",
     features: [
@@ -738,7 +741,7 @@ export const products: Product[] = [
       "U-disk storage",
     ],
     specs: {
-      "Model": "TVN-SmartGo",
+      "Model": "UT-SmartGo",
       "Resolution": "1600 x 1400",
       "Frame Rate": "Color/Black and White",
       "Network Interface": "100Mbps",
@@ -753,7 +756,7 @@ export const products: Product[] = [
   {
     id: 19,
     name: "Robot Vision Camera",
-    model: "Robot-Vision-Cam",
+    model: "UT-Smart-2000M",
     category: "vision-inspection",
     subCategory: "Robot Vision Camera",
     resolution: "High-definition",
@@ -764,10 +767,10 @@ export const products: Product[] = [
     priceNum: 0,
     rating: 4.7,
     reviews: 98,
-    image: "/images/products/robot-vision-cam/main.jpg",
+    image: "/images/products/ut-smart-2000m/main.jpg",
     images: [
-      "/images/products/robot-vision-cam/main.jpg",
-      "/images/products/robot-vision-cam/detail1.jpg",
+      "/images/products/ut-smart-2000m/main.jpg",
+      "/images/products/ut-smart-2000m/detail1.jpg",
     ],
     description: "Industrial Robot Vision Camera for industrial robots vision system, defect product inspection, product position controls, and QC checking for micro products.",
     features: [
@@ -778,7 +781,7 @@ export const products: Product[] = [
       "QC checking for micro products",
     ],
     specs: {
-      "Model": "Robot Vision Camera",
+      "Model": "UT-Smart-2000M",
       "Application": "Industrial robot vision, machine vision",
       "Functions": "Defect inspection, position control",
     },
@@ -788,7 +791,7 @@ export const products: Product[] = [
   {
     id: 20,
     name: "PCB Microscope",
-    model: "TVN-9218/9118",
+    model: "UT-9218/9118",
     category: "vision-inspection",
     subCategory: "PCB Microscope",
     resolution: "1920 x 1080",
@@ -801,10 +804,10 @@ export const products: Product[] = [
     badgeColor: "bg-red-500",
     rating: 4.8,
     reviews: 267,
-    image: "/images/products/tvn-9218-9118/main.jpg",
+    image: "/images/products/ut-9218-9118/main.jpg",
     images: [
-      "/images/products/tvn-9218-9118/main.jpg",
-      "/images/products/tvn-9218-9118/detail1.jpg",
+      "/images/products/ut-9218-9118/main.jpg",
+      "/images/products/ut-9218-9118/detail1.jpg",
     ],
     description: "Electron Microscope designed for PCB board inspection with high resolution and frame rate. Features HDMI output and SD card storage.",
     features: [
@@ -815,7 +818,7 @@ export const products: Product[] = [
       "PCB board inspection optimized",
     ],
     specs: {
-      "Model": "TVN-9218/9118",
+      "Model": "UT-9218/9118",
       "Resolution": "1920 x 1080",
       "Frame Rate": "60fps",
       "Optical Size": "1/3 inch",
@@ -831,7 +834,7 @@ export const products: Product[] = [
   {
     id: 21,
     name: "Wireless Thermal Camera",
-    model: "TR-IX2 Pro",
+    model: "UT-IX2 Pro",
     category: "thermal-camera",
     subCategory: "Wireless Thermal Camera",
     resolution: "256x192 (512x384 AI)",
@@ -844,10 +847,10 @@ export const products: Product[] = [
     badgeColor: "bg-green-500",
     rating: 4.8,
     reviews: 189,
-    image: "/images/products/tr-ix2-pro/main.jpg",
+    image: "/images/products/ut-ix2-pro/main.jpg",
     images: [
-      "/images/products/tr-ix2-pro/main.jpg",
-      "/images/products/tr-ix2-pro/detail1.jpg",
+      "/images/products/ut-ix2-pro/main.jpg",
+      "/images/products/ut-ix2-pro/detail1.jpg",
     ],
     description: "Wireless Infrared Thermal Imager for mobile phones compatible with Android and iOS. Features 256×192 thermal resolution upgradable to 512×384 via AI, 30m wireless range, and 7mm adjustable focus lens.",
     features: [
@@ -859,7 +862,7 @@ export const products: Product[] = [
       "Android & iOS compatible",
     ],
     specs: {
-      "Model": "TR-IX2 Pro",
+      "Model": "UT-IX2 Pro",
       "Thermal Resolution": "256×192 (512×384 with AI)",
       "Wireless Range": "30m",
       "Lens": "7mm adjustable focus",
@@ -871,7 +874,7 @@ export const products: Product[] = [
   {
     id: 22,
     name: "Thermal Imaging Camera",
-    model: "TR-460TC",
+    model: "UT-460TC",
     category: "thermal-camera",
     subCategory: "Online Thermal Camera",
     resolution: "640x512",
@@ -884,10 +887,10 @@ export const products: Product[] = [
     badgeColor: "bg-orange-500",
     rating: 4.9,
     reviews: 124,
-    image: "/images/products/tr-460tc/main.jpg",
+    image: "/images/products/ut-460tc/main.jpg",
     images: [
-      "/images/products/tr-460tc/main.jpg",
-      "/images/products/tr-460tc/detail1.jpg",
+      "/images/products/ut-460tc/main.jpg",
+      "/images/products/ut-460tc/detail1.jpg",
     ],
     description: "High-performance network-based thermal imager with uncooled infrared focal plane array detector. Supports Modbus TCP, ONVIF, and GB28181 protocols with professional analysis software and SDK.",
     features: [
@@ -900,7 +903,7 @@ export const products: Product[] = [
       "Professional analysis software & SDK",
     ],
     specs: {
-      "Model": "TR-460TC",
+      "Model": "UT-460TC",
       "Resolution": "640×512",
       "Frame Rate": "25Hz",
       "Temperature Range": "-20℃ to +650℃",
@@ -914,12 +917,12 @@ export const products: Product[] = [
   // ========== Specialized Microscopes (2 products) ==========
   {
     id: 23,
-    name: "Depth of Field Microscope",
-    model: "TVN-600II_A",
+    name: "All-in-One Digital Microscope",
+    model: "UT-600II_PII",
     category: "specialized-microscope",
-    subCategory: "Depth of Field Microscope",
+    subCategory: "All-in-One Microscope",
     resolution: "HD",
-    interface: "Ethernet",
+    interface: "USB",
     shutter: "Rolling Shutter",
     fps: "60fps",
     price: "Contact Us",
@@ -927,33 +930,37 @@ export const products: Product[] = [
     badge: "Hot",
     badgeColor: "bg-red-500",
     rating: 4.8,
-    reviews: 156,
-    image: "/images/products/tvn-600ii-a/main.jpg",
+    reviews: 178,
+    image: "/images/products/ut-600ii-pii/main.jpg",
     images: [
-      "/images/products/tvn-600ii-a/main.jpg",
-      "/images/products/tvn-600ii-a/detail1.jpg",
+      "/images/products/ut-600ii-pii/main.jpg",
+      "/images/products/ut-600ii-pii/detail1.jpg",
     ],
-    description: "Electric Microscope with flashlight function, depth of field synthesis, light source shielding, and Ethernet port for convenient picture transfer.",
+    description: "All-in-one digital microscope with magnification knob, ring light source, up and down adjustment, and USB mouse operation with U disk storage.",
     features: [
-      "Flashlight function for unclear fonts",
-      "Depth of field synthesis",
-      "Light source shielding for FPC boards",
-      "Ethernet port for picture transfer",
-      "PCBA chip inspection",
-      "FPC board observation",
+      "All-in-one design",
+      "Magnification adjustment knob",
+      "Ring light source",
+      "Up and down adjustment",
+      "Light source brightness control",
+      "USB mouse operation",
+      "U disk storage",
     ],
     specs: {
-      "Model": "TVN-600II_A",
-      "Functions": "Flashlight, Depth of field synthesis, Light source shielding",
-      "Interface": "Ethernet port",
+      "Model": "UT-600II_PII",
+      "Magnification": "Adjustable knob",
+      "Light Source": "Ring light",
+      "Adjustment": "Up and down knob",
+      "Storage": "U disk",
+      "Control": "USB mouse",
     },
     inStock: true,
-    detailUrl: "https://www.troysupply.com/world-top-of-depth-of-field-microscope-tvn-600ii_p474.html",
+    detailUrl: "https://www.troysupply.com/china-top-of-all-in-one-microscope-tvn-600ii_p403.html",
   },
   {
     id: 24,
     name: "SEM Microscope",
-    model: "TR3200",
+    model: "UT-3200",
     category: "specialized-microscope",
     subCategory: "SEM Microscope",
     resolution: "Nanometer scale",
@@ -966,10 +973,10 @@ export const products: Product[] = [
     badgeColor: "bg-purple-500",
     rating: 4.9,
     reviews: 45,
-    image: "/images/products/tr3200/main.jpg",
+    image: "/images/products/ut-3200/main.jpg",
     images: [
-      "/images/products/tr3200/main.jpg",
-      "/images/products/tr3200/detail1.jpg",
+      "/images/products/ut-3200/main.jpg",
+      "/images/products/ut-3200/detail1.jpg",
     ],
     description: "High-performance tungsten SEM microscope with excellent image quality in both high and low vacuum modes. Large depth of field and user-friendly interface for sample characterization.",
     features: [
@@ -981,7 +988,7 @@ export const products: Product[] = [
       "Nanometer scale imaging",
     ],
     specs: {
-      "Model": "TR3200",
+      "Model": "UT-3200",
       "Type": "Tungsten SEM",
       "Vacuum Modes": "High and low vacuum",
       "Features": "Large depth of field",

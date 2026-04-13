@@ -35,7 +35,7 @@ const solutionData = {
         "No programming needed, sample training ready to use",
         "Real-time alarm, automatic sorting",
       ],
-      products: ["TVN-SmartGo", "TR-A100", "TVN-9218/9118"],
+      products: ["UT-SmartGo", "UT-A100", "UT-9218/9118"],
     },
     {
       id: "positioning",
@@ -47,7 +47,7 @@ const solutionData = {
         "Support rotation, scaling, occlusion",
         "Multi-target simultaneous recognition",
       ],
-      products: ["Robot-Vision-Cam", "TVN-SmartGo", "TVN-600II"],
+      products: ["UT-Smart-2000M", "UT-SmartGo", "UT-600II"],
     },
     {
       id: "measurement",
@@ -59,7 +59,7 @@ const solutionData = {
         "Automatic calibration compensation",
         "Data recording and traceability",
       ],
-      products: ["TVN-3500AF", "TVN-3800II", "TVN-50MINI"],
+      products: ["UT-3500AF", "UT-600II_A", "UT-50MINI"],
     },
   ],
   comparison: [
@@ -74,9 +74,9 @@ const solutionData = {
         "Network interface, remote monitoring",
       ],
       products: [
-        { name: "TVN-SmartGo", spec: "1600×1400, Smart Vision" },
-        { name: "TVN-9218/9118", spec: "1920×1080, PCB Inspection" },
-        { name: "TVN-600II", spec: "All-in-One Vision System" },
+        { name: "UT-SmartGo", spec: "1600×1400, Smart Vision" },
+        { name: "UT-9218/9118", spec: "1920×1080, PCB Inspection" },
+        { name: "UT-600II", spec: "All-in-One Vision System" },
       ],
     },
     {
@@ -90,9 +90,9 @@ const solutionData = {
         "Compact mini size",
       ],
       products: [
-        { name: "TR-A100", spec: "One-button MINI AOI" },
-        { name: "TVN-3500AF", spec: "Auto Focus Measurement" },
-        { name: "TVN-3800II", spec: "Digital Measuring Microscope" },
+        { name: "UT-A100", spec: "One-button MINI AOI" },
+        { name: "UT-3500AF", spec: "Auto Focus Measurement" },
+        { name: "UT-600II_A", spec: "Digital Measuring Microscope" },
       ],
     },
   ],
@@ -101,7 +101,7 @@ const solutionData = {
       company: "Mobile Phone Component Supplier",
       industry: "Consumer Electronics",
       challenge: "Metal casing appearance defect detection, many defect types, traditional algorithms difficult to cover",
-      solution: "Deploy 10 TVN-SmartGo cameras with deep learning defect detection",
+      solution: "Deploy 10 UT-SmartGo cameras with deep learning defect detection",
       result: [
         "Detection accuracy 99.7%",
         "Detection speed 120 pieces/minute",
@@ -123,7 +123,7 @@ const solutionData = {
       company: "Precision Hardware Enterprise",
       industry: "Precision Manufacturing",
       challenge: "Small part dimension measurement, manual measurement low efficiency and large errors",
-      solution: "TVN-3500AF Auto Focus + Measurement Software",
+      solution: "UT-3500AF Auto Focus + Measurement Software",
       result: [
         "Measurement accuracy ±0.01mm",
         "Measurement efficiency improved 10x",
