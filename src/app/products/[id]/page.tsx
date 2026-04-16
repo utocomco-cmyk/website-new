@@ -23,8 +23,6 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     product.name,
     product.subCategory,
     "industrial camera",
-    product.resolution,
-    product.interface,
     "machine vision",
     "industrial camera price",
     "industrial camera manufacturer"
@@ -32,7 +30,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 
   return {
     title: `${product.model} ${product.name} - ${product.subCategory} | Utocom`,
-    description: `${product.description} Resolution ${product.resolution}, ${product.interface} interface, suitable for industrial inspection and machine vision applications. Utocom professional industrial camera manufacturer.`,
+    description: `${product.description} Suitable for industrial inspection and machine vision applications. Utocom professional industrial camera manufacturer.`,
     keywords: keywords,
     openGraph: {
       title: `${product.model} ${product.name} - ${product.subCategory} | Utocom`,

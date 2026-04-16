@@ -23,6 +23,8 @@ function ProductImage({ product, className }: { product: Product; className?: st
         fill
         className={`object-contain ${className || ""}`}
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        priority
+        unoptimized
       />
     );
   }
@@ -49,14 +51,16 @@ export function ProductCard({ product, viewMode }: ProductCardProps) {
         <CardContent className="p-4">
           <div className="flex gap-4">
             {/* Image - 统一为正方形 */}
-            <div className="relative w-32 h-32 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
-              <ProductImage product={product} className="w-full h-full p-2" />
-              {product.badge && (
-                <Badge className={`absolute top-2 left-2 ${product.badgeColor} text-white text-xs`}>
-                  {product.badge}
-                </Badge>
-              )}
-            </div>
+            <Link href={`/products/${product.id}`} className="block flex-shrink-0">
+              <div className="relative w-32 h-32 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
+                <ProductImage product={product} className="w-full h-full p-2" />
+                {product.badge && (
+                  <Badge className={`absolute top-2 left-2 ${product.badgeColor} text-white text-xs`}>
+                    {product.badge}
+                  </Badge>
+                )}
+              </div>
+            </Link>
 
             {/* Info */}
             <div className="flex-1 min-w-0">
@@ -86,11 +90,12 @@ export function ProductCard({ product, viewMode }: ProductCardProps) {
 
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4 text-sm text-gray-500">
-                  <span>{product.resolution}</span>
-                  <span>·</span>
-                  <span>{product.interface}</span>
-                  <span>·</span>
-                  <span>{product.fps}</span>
+                  {product.specs && Object.entries(product.specs).slice(0, 3).map(([key, value], index) => (
+                    <span key={key}>
+                      {index > 0 && <span className="mx-2">·</span>}
+                      {value}
+                    </span>
+                  ))}
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="flex items-center gap-1">
@@ -116,16 +121,18 @@ export function ProductCard({ product, viewMode }: ProductCardProps) {
   return (
     <Card className="group bg-white border-gray-200 hover:border-gray-300 overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
       {/* Product image area - 800x800 aspect ratio */}
-      <div className="relative aspect-square bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center overflow-hidden">
-        <div className="w-full h-full p-8 opacity-80 group-hover:opacity-100 transition-opacity group-hover:scale-105 duration-300">
-          <ProductImage product={product} className="w-full h-full" />
+      <Link href={`/products/${product.id}`} className="block">
+        <div className="relative aspect-square bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center overflow-hidden">
+          <div className="w-full h-full p-8 opacity-80 group-hover:opacity-100 transition-opacity group-hover:scale-105 duration-300">
+            <ProductImage product={product} className="w-full h-full" />
+          </div>
+          {product.badge && (
+            <Badge className={`absolute top-3 left-3 ${product.badgeColor} text-white`}>
+              {product.badge}
+            </Badge>
+          )}
         </div>
-        {product.badge && (
-          <Badge className={`absolute top-3 left-3 ${product.badgeColor} text-white`}>
-            {product.badge}
-          </Badge>
-        )}
-      </div>
+      </Link>
 
       {/* Info */}
       <CardContent className="p-5">
@@ -138,15 +145,10 @@ export function ProductCard({ product, viewMode }: ProductCardProps) {
         <div className="text-gray-400 text-sm mb-3">{product.model}</div>
 
         <div className="grid grid-cols-2 gap-2 mb-4">
-          {[
-            ["Resolution", product.resolution],
-            ["Interface", product.interface],
-            ["Shutter", product.shutter],
-            ["Frame Rate", product.fps],
-          ].map(([k, v]) => (
-            <div key={k} className="bg-gray-50 rounded-lg px-2.5 py-1.5">
-              <div className="text-gray-400 text-xs">{k}</div>
-              <div className="text-gray-700 text-xs font-medium mt-0.5">{v}</div>
+          {product.specs && Object.entries(product.specs).slice(0, 4).map(([key, value]) => (
+            <div key={key} className="bg-gray-50 rounded-lg px-2.5 py-1.5">
+              <div className="text-gray-400 text-xs">{key}</div>
+              <div className="text-gray-700 text-xs font-medium mt-0.5">{value}</div>
             </div>
           ))}
         </div>

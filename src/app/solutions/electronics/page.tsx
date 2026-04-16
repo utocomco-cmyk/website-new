@@ -5,6 +5,7 @@ import { Footer } from "@/components/sections/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 import {
   Monitor,
@@ -17,144 +18,149 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-// 电子产线检测方案数据
+// 电子产线Inspection Solutions数据
 const solutionData = {
-  title: "电子产线实时检测方案",
-  subtitle: "基于 HDMI 高清输出与智能 AI 检测的双模解决方案",
-  desc: "针对电子制造产线的高清实时检测需求，提供即插即用的 HDMI 相机与内置 AI 算法的智能相机，支持实时显示、自动检测、数据记录一体化",
+  title: "Electronics Production Line Inspection Solutions",
+  subtitle: "HDMI 基于 HDMI 高清输出与智能 AI 检测的双模解决Solution AI Dual-Mode Inspection Solutions",
+  desc: "Real-time HD inspection solutions for electronics manufacturing, featuring plug-and-play HDMI cameras and AI-powered smart cameras with real-time display, automated detection, and data logging",
   stats: [
-    { value: "1080P~4K", label: "输出分辨率" },
-    { value: "60fps", label: "实时帧率" },
-    { value: "<50ms", label: "检测延迟" },
+    { value: "1080P~4K", label: "Output Resolution" },
+    { value: "60fps", label: "Frame Rate" },
+    { value: "<50ms", label: "Detection Latency" },
   ],
-  // 应用场景
+  // Application Scenarios
   scenarios: [
     {
       id: "pcb",
-      title: "PCB 焊点检测",
+      title: "PCB Solder Joint Inspection",
       icon: Monitor,
-      desc: "实时检测焊点质量，识别虚焊、短路、缺焊等缺陷",
+      image: "/images/scenarios/pcb-inspection.jpg",
+      desc: "Real-time solder joint quality inspection, identifying cold joints, shorts, and missing solder defects",
       painPoints: [
-        "人工目检效率低，易疲劳漏检",
-        "传统相机需要电脑处理，延迟高",
-        "产线空间有限，难以部署复杂系统",
+        "Manual inspection is inefficient and prone to fatigue-related misses",
+        "Traditional cameras require PC processing with high latency",
+        "Limited production line space makes complex systems difficult to deploy",
       ],
-      solution: "HDMI 相机直连显示器，操作员实时观察；智能相机内置 AI 算法，自动识别缺陷并报警",
+      solution: "HDMI camera connects directly to monitor for real-time operator viewing; Smart camera with built-in AI algorithms automatically identifies defects and alerts",
       benefits: [
-        "即插即用，无需电脑，节省空间",
-        "实时显示，零延迟观察",
-        "AI 自动检测，减少人工误判",
+        "Plug-and-play, no PC required, saves space",
+        "Real-time display with zero-latency viewing",
+        "AI automated detection reduces manual errors",
       ],
-      products: ["SmartGO-570CPLC", "Smart-2K", "Smart-4k-80"],
+      products: ["UT-9218/9118", "UT-600II", "UT-SmartGo"],
       href: "/solutions/electronics/pcb",
     },
     {
       id: "assembly",
-      title: "零件装配检测",
+      title: "Component Assembly Inspection",
       icon: Settings,
-      desc: "检测零件装配位置、方向、完整性",
+      image: "/images/scenarios/robot-vision.jpg",
+      desc: "Inspect component placement position, orientation, and completeness",
       painPoints: [
-        "零件体积小，人工难以精准判断",
-        "装配速度快，需要实时反馈",
-        "多种产品混线，需要快速切换检测程序",
+        "Small component size makes manual precision judgment difficult",
+        "Fast assembly speed requires real-time feedback",
+        "Mixed product lines require quick switching of inspection programs",
       ],
-      solution: "智能相机内置定位算法，实时输出坐标；HDMI 相机辅助人工复检",
+      solution: "Smart camera with built-in positioning algorithms outputs coordinates in real-time; HDMI camera assists manual re-inspection",
       benefits: [
-        "定位精度达 ±0.05mm",
-        "支持多模板切换，适应混线生产",
+        "Positioning accuracy up to ±0.05mm",
+        "Supports multi-template switching for mixed-line production",
         "检测速度 >100 件/分钟",
       ],
-      products: ["SmartGO-178CPLC", "SmartGO-560M", "Smart-3000"],
+      products: ["UT-Smart-2000M", "UT-SmartGo", "UT-A100"],
       href: "/solutions/electronics/assembly",
     },
     {
       id: "appearance",
-      title: "外观缺陷检测",
+      title: "Appearance Defect Inspection",
       icon: Eye,
-      desc: "检测产品表面划痕、污渍、色差等外观缺陷",
+      image: "/images/industries/01-semiconductor.jpg",
+      desc: "Detect surface scratches, stains, color differences and other appearance defects",
       painPoints: [
-        "缺陷类型多样，规则难以定义",
-        "光照条件复杂，影响成像质量",
-        "需要保存检测记录，追溯质量问题",
+        "Diverse defect types make rules difficult to define",
+        "Complex lighting conditions affect imaging quality",
+        "Need to save inspection records for quality traceability",
       ],
-      solution: "智能相机深度学习算法，自适应多种缺陷；支持 U 盘存储检测图像",
+      solution: "Smart camera with deep learning algorithms adapts to various defects; Supports USB storage of inspection images",
       benefits: [
-        "支持 20+ 种缺陷类型识别",
-        "自动适应光照变化",
-        "本地存储，数据安全",
+        "Supports 20+ defect type recognition",
+        "Automatically adapts to lighting changes",
+        "Local storage ensures data security",
       ],
-      products: ["SmartGO-570M", "SmartGO-6MP-BW", "Smart-3000M"],
+      products: ["UT-SmartGo", "UT-A100", "UT-3500AF"],
       href: "/solutions/electronics/appearance",
     },
   ],
-  // 方案对比
+  // Solution Comparison
   comparison: [
     {
-      type: "HDMI 相机方案",
+      type: "HDMI Camera Solution",
       icon: Monitor,
-      bestFor: "人工目检、实时观察、教学演示",
+      image: "/images/products/ut-9218/main.jpg",
+      bestFor: "Manual inspection, real-time observation, teaching demonstration",
       features: [
-        "即插即用，无需电脑",
-        "1080P~4K 高清输出",
-        "零延迟，实时显示",
-        "支持鼠标操作、U 盘存储",
+        "Plug-and-play, no PC required",
+        "1080P~4K HD output",
+        "Zero latency, real-time display",
+        "Supports mouse operation, USB storage",
       ],
       products: [
-        { name: "Smart-2K", spec: "2560×1440, 2K 输出" },
-        { name: "Smart-4k-80", spec: "3840×2160, 4K 显微镜" },
-        { name: "Smart-3000", spec: "1920×1080, 通用型" },
+        { name: "UT-9218/9118", spec: "1920×1080, HDMI 显微镜" },
+        { name: "UT-2K30/4K30", spec: "高清工业相机" },
+        { name: "UT-600", spec: "1080P 电子显微镜" },
       ],
     },
     {
-      type: "智能相机方案",
+      type: "Smart Camera Solution",
       icon: Brain,
-      bestFor: "自动检测、AI 识别、无人值守",
+      image: "/images/products/ut-smartgo/main.jpg",
+      bestFor: "Automated detection, AI recognition, unmanned operation",
       features: [
-        "内置 AI 算法，无需 PC",
-        "自动识别缺陷并报警",
-        "网络接口，支持远程监控",
-        "I/O 接口，联动产线设备",
+        "Built-in AI algorithms, no PC required",
+        "Automatically identifies defects and alerts",
+        "Network interface supports remote monitoring",
+        "I/O interface for production line integration",
       ],
       products: [
-        { name: "SmartGO-570CPLC", spec: "1600×1200, AI 检测" },
-        { name: "SmartGO-178CPLC", spec: "3072×1728, 6MP 高清" },
-        { name: "SmartGO-560M", spec: "1280×1024, 定位专用" },
+        { name: "UT-SmartGo", spec: "1600×1400, 智能视觉相机" },
+        { name: "UT-A100", spec: "一键式 AOI 检测设备" },
+        { name: "UT-Smart-2000M", spec: "机器人视觉相机" },
       ],
     },
   ],
-  // 客户案例
+  // Customer Cases
   cases: [
     {
-      company: "某电子制造代工厂",
-      industry: "消费电子",
-      challenge: "SMT 产线焊点人工目检效率低，漏检率高",
-      solution: "部署 20 台 SmartGO-570CPLC 智能相机，检测焊点质量",
+      company: "Electronics Manufacturing OEM",
+      industry: "Consumer Electronics",
+      challenge: "Manual SMT solder joint inspection is inefficient with high miss rates",
+      solution: "Deployed 20 UT-SmartGo smart cameras for solder joint quality inspection",
       result: [
-        "检测效率提升 300%",
-        "漏检率从 5% 降至 0.1%",
-        "节省人工 15 人",
+        "Inspection efficiency improved by 300%",
+        "Miss rate reduced from 5% to 0.1%",
+        "Saved 15 manual inspectors",
       ],
     },
     {
-      company: "某汽车电子供应商",
-      industry: "汽车零部件",
-      challenge: "ECU 主板装配检测，零件种类多，换线频繁",
-      solution: "HDMI 相机 + 智能相机双模方案，人工+自动检测结合",
+      company: "Automotive Electronics Supplier",
+      industry: "Automotive Parts",
+      challenge: "ECU board assembly inspection with many component types and frequent line changes",
+      solution: "HDMI + Smart camera dual-mode solution combining manual and automated inspection",
       result: [
-        "换线时间从 2 小时缩短至 15 分钟",
-        "检测准确率 99.5%",
-        "产线产能提升 40%",
+        "Line change time reduced from 2 hours to 15 minutes",
+        "Inspection accuracy 99.5%",
+        "Production capacity increased by 40%",
       ],
     },
     {
-      company: "某医疗器械企业",
-      industry: "医疗电子",
-      challenge: "精密零件外观检测，需要高清成像和数据追溯",
-      solution: "Smart-4k-80 高清显微镜相机，4K 成像 + U 盘存储",
+      company: "Medical Device Company",
+      industry: "Medical Electronics",
+      challenge: "Precision component appearance inspection requiring HD imaging and data traceability",
+      solution: "UT-MT4K80 HD microscope camera with 4K imaging + USB storage",
       result: [
-        "成像清晰度提升 4 倍",
-        "检测数据自动保存，可追溯",
-        "通过 FDA 认证要求",
+        "Image clarity improved 4x",
+        "Inspection data automatically saved and traceable",
+        "Passed FDA certification requirements",
       ],
     },
   ],
@@ -166,11 +172,22 @@ export default function ElectronicsSolutionPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="relative pt-24 pb-16 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/solutions/electronics-smt.png"
+            alt="电子产线Inspection Solutions"
+            fill
+            className="object-cover opacity-20"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-50/90 to-blue-50/90" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center max-w-4xl mx-auto">
             <Badge className="bg-blue-100 text-blue-700 border-blue-200 mb-6">
-              行业解决方案
+              Industry Solutions
             </Badge>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
               {solutionData.title}
@@ -195,11 +212,11 @@ export default function ElectronicsSolutionPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Button className="bg-blue-600 hover:bg-blue-700 h-12 px-8">
                 <Phone className="w-5 h-5 mr-2" />
-                获取方案报价
+                获取Solution报价
               </Button>
-              <Button variant="outline" className="h-12 px-8">
+              <Button variant="outline" className="h-12 px-8 bg-white/80">
                 <Mail className="w-5 h-5 mr-2" />
-                技术咨询
+                Technical Consultation
               </Button>
             </div>
           </div>
@@ -210,26 +227,27 @@ export default function ElectronicsSolutionPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">检测方案</h2>
-            <p className="text-gray-600">根据您的需求选择合适的方案</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Inspection Solutions</h2>
+            <p className="text-gray-600">Choose the right solution for your needs</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {solutionData.comparison.map((item, idx) => {
-              const Icon = item.icon;
-              return (
-                <Card key={idx} className="border-gray-200 shadow-sm">
-                  <CardContent className="p-8">
-                    <div className="flex items-center gap-3 mb-6">
-                      <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center">
-                        <Icon className="w-6 h-6 text-blue-600" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900">{item.type}</h3>
-                        <p className="text-blue-600 text-sm">{item.bestFor}</p>
-                      </div>
+            {solutionData.comparison.map((item, idx) => (
+                <Card key={idx} className="border-gray-200 shadow-sm overflow-hidden">
+                  {/* Product Image */}
+                  <div className="relative h-56 w-full bg-gray-100">
+                    <Image
+                      src={item.image}
+                      alt={item.type}
+                      fill
+                      className="object-contain p-4"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent pt-12 pb-4 px-4">
+                      <h3 className="text-xl font-bold text-white">{item.type}</h3>
+                      <p className="text-white/80 text-sm">{item.bestFor}</p>
                     </div>
-
+                  </div>
+                  <CardContent className="p-6">
                     <div className="space-y-3 mb-6">
                       {item.features.map((feature, fidx) => (
                         <div key={fidx} className="flex items-center gap-2 text-gray-700">
@@ -240,7 +258,7 @@ export default function ElectronicsSolutionPage() {
                     </div>
 
                     <div className="border-t border-gray-100 pt-6">
-                      <h4 className="text-sm font-semibold text-gray-500 mb-3">推荐产品</h4>
+                      <h4 className="text-sm font-semibold text-gray-500 mb-3">Recommended Products</h4>
                       <div className="space-y-2">
                         {item.products.map((product, pidx) => (
                           <div
@@ -255,29 +273,40 @@ export default function ElectronicsSolutionPage() {
                     </div>
                   </CardContent>
                 </Card>
-              );
-            })}
+            ))}
           </div>
 
-          {/* Application Scenarios - 放在检测方案下面 */}
+          {/* Application Scenarios - below Inspection Solutions */}
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">应用场景</h3>
-            <p className="text-gray-600">覆盖电子产线核心检测环节</p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Application Scenarios</h3>
+            <p className="text-gray-600">Covering core electronics production line inspection processes</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {solutionData.scenarios.map((scenario) => {
-              const Icon = scenario.icon;
+              const ScenarioIcon = scenario.icon;
               return (
                 <Link key={scenario.id} href={scenario.href || "#"}>
-                  <Card className="border-gray-200 shadow-sm hover:shadow-md transition-shadow cursor-pointer h-full">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">
-                          <Icon className="w-5 h-5 text-blue-600" />
+                  <Card className="border-gray-200 shadow-sm hover:shadow-md transition-shadow cursor-pointer h-full overflow-hidden">
+                    {/* Scenario Image */}
+                    <div className="relative h-40 w-full">
+                      <Image
+                        src={scenario.image}
+                        alt={scenario.title}
+                        fill
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                      <div className="absolute bottom-3 left-4 right-4">
+                        <div className="flex items-center gap-2">
+                          <div className="w-8 h-8 rounded-lg bg-white/90 flex items-center justify-center">
+                            <ScenarioIcon className="w-4 h-4 text-blue-600" />
+                          </div>
+                          <h4 className="text-lg font-bold text-white">{scenario.title}</h4>
                         </div>
-                        <h4 className="text-lg font-bold text-gray-900">{scenario.title}</h4>
                       </div>
+                    </div>
+                    <CardContent className="p-6">
                       <p className="text-gray-600 text-sm mb-4">{scenario.desc}</p>
                       
                       <div className="space-y-2 mb-4">
@@ -290,7 +319,7 @@ export default function ElectronicsSolutionPage() {
                       </div>
 
                       <div className="pt-4 border-t border-gray-100">
-                        <div className="text-xs text-gray-500 mb-2">推荐产品</div>
+                        <div className="text-xs text-gray-500 mb-2">Recommended Products</div>
                         <div className="flex flex-wrap gap-2">
                           {scenario.products.slice(0, 2).map((product, idx) => (
                             <Badge key={idx} variant="secondary" className="text-xs">
@@ -312,8 +341,8 @@ export default function ElectronicsSolutionPage() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">客户案例</h2>
-            <p className="text-gray-600">真实的应用效果</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Customer Cases</h2>
+            <p className="text-gray-600">Real Application Results</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -329,17 +358,17 @@ export default function ElectronicsSolutionPage() {
                   
                   <div className="space-y-4 mt-4">
                     <div className="bg-red-50 rounded-lg p-3">
-                      <div className="text-red-600 text-xs mb-1">挑战</div>
+                      <div className="text-red-600 text-xs mb-1">Challenge</div>
                       <div className="text-red-700 text-sm">{caseItem.challenge}</div>
                     </div>
                     
                     <div className="bg-blue-50 rounded-lg p-3">
-                      <div className="text-blue-600 text-xs mb-1">方案</div>
+                      <div className="text-blue-600 text-xs mb-1">Solution</div>
                       <div className="text-blue-700 text-sm">{caseItem.solution}</div>
                     </div>
                     
                     <div className="bg-green-50 rounded-lg p-3">
-                      <div className="text-green-600 text-xs mb-1">效果</div>
+                      <div className="text-green-600 text-xs mb-1">Results</div>
                       <ul className="space-y-1">
                         {caseItem.result.map((res, ridx) => (
                           <li key={ridx} className="text-green-700 text-sm flex items-center gap-1">
@@ -361,10 +390,10 @@ export default function ElectronicsSolutionPage() {
       <section className="py-16 bg-blue-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            需要定制化的检测方案？
+            需要定制化的Inspection Solutions？
           </h2>
           <p className="text-blue-100 mb-8">
-            我们的技术团队可以根据您的产线特点，提供免费的方案设计与产品试用
+            我们的技术团队可以根据您的产线特点，提供免费的Solution设计与产品试用
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button className="bg-white text-blue-600 hover:bg-gray-100 h-12 px-8">

@@ -140,33 +140,33 @@ const featuredProducts = [
 
 export function FeaturedProducts() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-end justify-between mb-12">
+        <div className="flex items-end justify-between mb-8">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-600 text-sm mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-600 text-sm mb-3">
               Featured
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
               Featured Products
             </h2>
           </div>
           <a
             href="/products"
-            className="hidden md:block text-blue-600 hover:text-blue-700 text-sm border border-blue-200 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors"
+            className="hidden md:block text-blue-600 hover:text-blue-700 text-sm border border-blue-200 px-3 py-1.5 rounded-lg hover:bg-blue-50 transition-colors"
           >
             View All Products →
           </a>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
           {featuredProducts.map((p) => (
             <Card
               key={p.id}
               className="group bg-white border-gray-200 hover:border-gray-300 overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
-              {/* Product image area - 800x800 aspect ratio */}
-              <div className="relative aspect-square bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center overflow-hidden">
+              {/* Product image area */}
+              <div className="relative aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center overflow-hidden">
                 {p.image ? (
                   <Image
                     src={p.image}
@@ -186,37 +186,37 @@ export function FeaturedProducts() {
                     </svg>
                   </div>
                 )}
-                <Badge className={`absolute top-3 left-3 ${p.badgeColor} text-white`}>
+                <Badge className={`absolute top-2 left-2 ${p.badgeColor} text-white text-xs px-2 py-0.5`}>
                   {p.badge}
                 </Badge>
               </div>
 
               {/* Info */}
-              <CardContent className="p-5">
-                <div className="text-gray-500 text-xs mb-1">{p.category}</div>
-                <h3 className="text-gray-900 font-bold text-lg mb-3">{p.name}</h3>
+              <CardContent className="p-3">
+                <div className="text-gray-500 text-xs mb-0.5">{p.category}</div>
+                <h3 className="text-gray-900 font-bold text-sm mb-2 line-clamp-1">{p.name}</h3>
 
-                <div className="grid grid-cols-2 gap-2 mb-4">
+                <div className="grid grid-cols-2 gap-1.5 mb-2">
                   {[
                     ["Resolution", p.resolution],
                     ["Interface", p.interface],
                     ["Shutter", p.shutter],
                     ["Frame Rate", p.fps],
                   ].map(([k, v]) => (
-                    <div key={k} className="bg-gray-50 rounded-lg px-2.5 py-1.5">
-                      <div className="text-gray-400 text-xs">{k}</div>
-                      <div className="text-gray-700 text-xs font-medium mt-0.5">{v}</div>
+                    <div key={k} className="bg-gray-50 rounded px-2 py-1">
+                      <div className="text-gray-400 text-[10px]">{k}</div>
+                      <div className="text-gray-700 text-[10px] font-medium">{v}</div>
                     </div>
                   ))}
                 </div>
 
                 {/* Rating */}
-                <div className="flex items-center gap-1.5 mb-4">
+                <div className="flex items-center gap-1 mb-2">
                   <div className="flex">
                     {[1, 2, 3, 4, 5].map((idx) => (
                       <Star
                         key={idx}
-                        className={`w-3 h-3 ${
+                        className={`w-2.5 h-2.5 ${
                           idx <= Math.round(p.rating)
                             ? "text-yellow-400 fill-yellow-400"
                             : "text-gray-300"
@@ -224,16 +224,16 @@ export function FeaturedProducts() {
                       />
                     ))}
                   </div>
-                  <span className="text-gray-700 text-xs font-medium">{p.rating}</span>
-                  <span className="text-gray-400 text-xs">({p.reviews} reviews)</span>
+                  <span className="text-gray-700 text-[10px] font-medium">{p.rating}</span>
+                  <span className="text-gray-400 text-[10px]">({p.reviews})</span>
                 </div>
 
                 {/* Price & View Details Button */}
                 <div className="flex items-center justify-between">
-                  <div className="text-blue-600 font-bold text-xl">{p.price}</div>
+                  <div className="text-blue-600 font-bold text-sm">{p.price}</div>
                   <Link href={`/products/${p.id}`}>
-                    <Button className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm rounded-xl transition-colors shadow-lg shadow-blue-600/30">
-                      View Details
+                    <Button className="px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white text-xs rounded-lg transition-colors shadow-md shadow-blue-600/30 h-auto">
+                      View
                     </Button>
                   </Link>
                 </div>

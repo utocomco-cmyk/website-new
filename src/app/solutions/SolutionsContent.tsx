@@ -5,68 +5,91 @@ import { Footer } from "@/components/sections/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import {
-  Monitor,
   Microscope,
   Brain,
   Check,
   ArrowRight,
   Phone,
   Mail,
+  Flame,
+  Cpu,
 } from "lucide-react";
 import Link from "next/link";
 
 const solutions = [
   {
-    id: "electronics",
-    icon: Monitor,
-    title: "Electronics Production Line Inspection",
-    subtitle: "HDMI HD Output + Smart AI Detection",
-    desc: "For HD real-time inspection needs of electronic manufacturing production lines, providing plug-and-play HDMI cameras and smart cameras with built-in AI algorithms",
-    color: "from-blue-500/20 to-blue-600/5",
-    border: "border-blue-500/30",
-    features: [
-      "Plug and play, no computer needed",
-      "1080P~4K HD output",
-      "AI automatic defect detection",
-      "USB storage support",
-    ],
-    products: ["SmartGO-570CPLC", "Smart-2K", "Smart-4k-80", "Smart-3000"],
-    href: "/solutions/electronics",
-  },
-  {
     id: "microscope",
     icon: Microscope,
-    title: "Microscope Vision Solution",
-    subtitle: "4K HD Imaging, Digital Microscopy",
-    desc: "For microscopic observation needs in biomedical, material analysis, and industrial inspection fields, providing 4K HD microscope cameras",
+    image: "/images/solutions/microscope-lab.png",
+    title: "Microscope Vision Solutions",
+    subtitle: "3D Imaging · 4K HD · Digital Microscopy",
+    desc: "Comprehensive microscopy solutions including 3D digital microscopes, metallographic microscopes, and electronic microscopes for semiconductor, PCB, material analysis, and research applications",
     color: "from-purple-500/20 to-purple-600/5",
     border: "border-purple-500/30",
     features: [
-      "4K/1080P HD imaging",
-      "HDMI real-time display",
-      "Image/video recording support",
-      "C-mount compatible with various microscopes",
+      "3D stereoscopic imaging",
+      "4K/1080P HD resolution",
+      "Metallographic analysis",
+      "C-mount compatible",
     ],
-    products: ["Smart-4k-80", "Smart-6500", "Smart-6000", "HS-3500M"],
+    products: ["UT-800+P3D", "UT-MT4K80", "UT-360A", "UT-600II"],
     href: "/solutions/microscope",
+  },
+  {
+    id: "electronics",
+    icon: Cpu,
+    image: "/images/solutions/electronics-smt.png",
+    title: "Electronics Inspection Solutions",
+    subtitle: "PCB Inspection · SMT Lines · Assembly Verification",
+    desc: "Comprehensive inspection solutions for electronics manufacturing including PCB solder joint inspection, component assembly verification, and automated optical inspection for SMT production lines",
+    color: "from-blue-500/20 to-blue-600/5",
+    border: "border-blue-500/30",
+    features: [
+      "PCB defect detection",
+      "Component placement verification",
+      "SMT line integration",
+      "Real-time quality control",
+    ],
+    products: ["UT-9218/9118", "UT-SmartGo", "UT-A100"],
+    href: "/solutions/electronics",
   },
   {
     id: "vision",
     icon: Brain,
-    title: "AI Smart Vision Solution",
-    subtitle: "Built-in Deep Learning, No PC Required",
-    desc: "For intelligent detection needs of industrial automation production lines, providing smart cameras with built-in AI algorithms, supporting defect detection and positioning recognition",
+    image: "/images/solutions/vision-hero.png",
+    title: "AI Vision Inspection Solutions",
+    subtitle: "AOI Systems · Smart Cameras · Automated Detection",
+    desc: "AI-powered vision inspection systems for automated defect detection, measurement, and quality control in manufacturing and electronics production",
     color: "from-green-500/20 to-green-600/5",
     border: "border-green-500/30",
     features: [
-      "Built-in AI algorithm",
-      "No external computer needed",
-      "Detection speed <50ms",
-      "Accuracy 99.5%",
+      "AI defect detection",
+      "Automated measurement",
+      "AOI inspection systems",
+      "High-speed processing",
     ],
-    products: ["SmartGO-570CPLC", "SmartGO-178CPLC", "SmartGO-560M"],
+    products: ["UT-SmartGo", "UT-A100", "UT-AI300CNC"],
     href: "/solutions/vision",
+  },
+  {
+    id: "thermal",
+    icon: Flame,
+    image: "/images/solutions/thermal-hero.png",
+    title: "Thermal Imaging Solutions",
+    subtitle: "Infrared Cameras · Temperature Measurement · Industrial",
+    desc: "Professional thermal imaging solutions including handheld wireless thermal cameras and online thermal imaging systems for electrical inspection, equipment monitoring, and industrial applications",
+    color: "from-orange-500/20 to-orange-600/5",
+    border: "border-orange-500/30",
+    features: [
+      "Wireless thermal imaging",
+      "Real-time temperature monitoring",
+      "AI super-resolution",
+      "Multi-platform support",
+    ],
+    products: ["UT-IX2 Pro", "UT-460TC"],
+    href: "/solutions/thermal",
   },
 ];
 
@@ -82,11 +105,12 @@ export function SolutionsContent() {
             Solutions
           </Badge>
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            Industrial Vision Solutions
+            Microscopy & Vision Solutions
           </h1>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
-            Complete vision solutions based on HDMI HD cameras, microscope cameras, and smart cameras,
-            covering electronic production line inspection, microscopic observation, AI intelligent detection and more
+            Professional microscopy and vision inspection solutions including 3D digital microscopes, 
+            metallographic microscopes, thermal cameras, and AI-powered vision systems for semiconductor, 
+            PCB inspection, material analysis, and industrial applications
           </p>
         </div>
       </section>
@@ -99,7 +123,7 @@ export function SolutionsContent() {
             <p className="text-gray-600">Select the right vision solution based on your application scenario</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {solutions.map((solution) => {
               const Icon = solution.icon;
               return (
@@ -107,18 +131,31 @@ export function SolutionsContent() {
                   key={solution.id}
                   className={`bg-gradient-to-br ${solution.color} ${solution.border} border overflow-hidden hover:shadow-lg transition-shadow`}
                 >
-                  <CardContent className="p-8">
-                    <div className="w-14 h-14 rounded-xl bg-white/80 flex items-center justify-center mb-6">
-                      <Icon className="w-7 h-7 text-gray-700" />
+                  {/* Solution Image */}
+                  <div className="relative h-40 w-full">
+                    <Image
+                      src={solution.image}
+                      alt={solution.title}
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute bottom-3 left-4 right-4">
+                      <div className="flex items-center gap-2">
+                        <div className="w-10 h-10 rounded-lg bg-white/90 flex items-center justify-center">
+                          <Icon className="w-5 h-5 text-gray-700" />
+                        </div>
+                        <div className="text-white text-xs font-medium">
+                          {solution.subtitle}
+                        </div>
+                      </div>
                     </div>
-
-                    <div className="text-blue-600 text-sm font-medium mb-2">
-                      {solution.subtitle}
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
                       {solution.title}
                     </h3>
-                    <p className="text-gray-600 mb-6">{solution.desc}</p>
+                    <p className="text-gray-600 text-sm mb-6">{solution.desc}</p>
 
                     <div className="space-y-2 mb-6">
                       {solution.features.map((feature, idx) => (

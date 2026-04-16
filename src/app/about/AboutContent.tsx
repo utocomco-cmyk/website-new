@@ -60,28 +60,7 @@ const stats = [
   { value: "98.6%", label: "Customer Satisfaction", icon: TrendingUp },
 ];
 
-const team = [
-  {
-    name: "Mr. Zhang",
-    title: "Founder & CEO",
-    desc: "Ph.D. from Tsinghua University, 20 years machine vision industry experience",
-  },
-  {
-    name: "Mr. Li",
-    title: "CTO",
-    desc: "Former Huawei senior engineer, image algorithm expert",
-  },
-  {
-    name: "Mr. Wang",
-    title: "Sales Director",
-    desc: "15 years industrial automation industry sales experience",
-  },
-  {
-    name: "Mr. Chen",
-    title: "R&D Director",
-    desc: "Led development of multiple star products",
-  },
-];
+
 
 export function AboutContent() {
   return (
@@ -224,39 +203,6 @@ export function AboutContent() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
-            <Badge className="bg-orange-100 text-orange-700 border-orange-200 mb-4">
-              Core Team
-            </Badge>
-            <h2 className="text-3xl font-bold text-gray-900">Professional Team</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((member) => (
-              <Card
-                key={member.name}
-                className="bg-white border-gray-200 overflow-hidden"
-              >
-                <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                  <div className="w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center">
-                    <span className="text-3xl font-bold text-blue-600">
-                      {member.name[0]}
-                    </span>
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-gray-900 font-bold text-lg">{member.name}</h3>
-                  <div className="text-blue-600 text-sm mb-3">{member.title}</div>
-                  <p className="text-gray-500 text-sm">{member.desc}</p>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>

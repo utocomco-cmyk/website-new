@@ -9,52 +9,52 @@ import Link from "next/link";
 const slides = [
   {
     id: 1,
-    tag: "Smart Manufacturing",
-    title: "Welding & Assembly Vision",
-    subtitle: "Real-time Monitoring · Defect Detection · Process Control",
-    desc: "Advanced vision systems for automated welding and assembly lines, ensuring precision and quality in manufacturing",
-    cta: "Explore Solutions",
-    ctaSub: "View Products",
-    gradient: "from-gray-900 via-orange-950 to-red-900",
-    accent: "#F97316",
-    badge: "Real-time",
-    image: "/images/scenarios/welding-automation.jpg",
-    imagePosition: "60% center",
+    tag: "Industrial Inspection",
+    title: "Precision Vision Solutions",
+    subtitle: "PCB Inspection · Semiconductor · Quality Control",
+    desc: "Advanced industrial microscopes and vision systems for electronics manufacturing, PCB inspection, and semiconductor quality assurance",
+    cta: "Explore Products",
+    ctaSub: "View Solutions",
+    gradient: "from-gray-900 via-blue-950 to-indigo-900",
+    accent: "#3B82F6",
+    badge: "Industry 4.0",
+    image: "/images/banner/banner-hero-1.jpg",
+    imagePosition: "80% center",
   },
   {
     id: 2,
-    tag: "Precision Inspection",
-    title: "PCB & Semiconductor Vision",
-    subtitle: "Microscopic Detection · PCB Inspection · Quality Assurance",
-    desc: "High-resolution imaging systems for electronics manufacturing, ensuring zero defects in semiconductor and PCB production",
-    cta: "View Applications",
+    tag: "Metallographic Analysis",
+    title: "Metallographic Microscopes",
+    subtitle: "Material Analysis · Metal Inspection · Research Grade",
+    desc: "Professional metallographic microscopes for material science, metal analysis, and quality control with 4K resolution and DIC imaging",
+    cta: "View Products",
     ctaSub: "Contact Sales",
     gradient: "from-gray-900 via-teal-950 to-cyan-900",
     accent: "#14B8A6",
-    badge: "Sub-micron",
-    image: "/images/scenarios/pcb-inspection.jpg",
-    imagePosition: "70% center",
+    badge: "4K DIC",
+    image: "/images/banner/banner-02.jpg",
+    imagePosition: "center center",
   },
   {
     id: 3,
-    tag: "Smart Logistics",
-    title: "Logistics & Sorting Vision",
-    subtitle: "Package Detection · Barcode Reading · Automated Sorting",
-    desc: "High-speed vision systems for logistics and warehousing, enabling automated package sorting, barcode recognition, and quality inspection",
+    tag: "Smart Vision Inspection",
+    title: "AI-Powered Vision Systems",
+    subtitle: "AOI Systems · Smart Cameras · Automated Inspection",
+    desc: "Intelligent vision inspection systems with AI algorithms for defect detection, measurement, and quality assurance in manufacturing",
     cta: "Explore Solutions",
     ctaSub: "View Products",
     gradient: "from-slate-900 via-blue-950 to-indigo-900",
     accent: "#3B82F6",
-    badge: "High-Speed",
-    image: "/images/scenarios/logistics-vision.jpg",
-    imagePosition: "center center",
+    badge: "AI Powered",
+    image: "/images/banner/banner-hero-3.jpg",
+    imagePosition: "75% center",
   },
 ];
 
 const stats = [
   { value: "20+", label: "Years Experience" },
-  { value: "3000+", label: "Product Models" },
-  { value: "50,000+", label: "Enterprise Clients" },
+  { value: "24+", label: "Microscope Models" },
+  { value: "7", label: "Product Categories" },
   { value: "98.6%", label: "Satisfaction Rate" },
 ];
 
@@ -93,7 +93,7 @@ export function HeroCarousel() {
   const slide = slides[current];
 
   return (
-    <section className="relative min-h-[700px] overflow-hidden">
+    <section className="relative min-h-[550px] overflow-hidden">
       {/* Background */}
       {slide.image ? (
         <>
@@ -139,7 +139,7 @@ export function HeroCarousel() {
         </>
       )}
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-32 pb-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-24 pb-16">
         <div className={`grid grid-cols-1 ${slide.image ? '' : 'lg:grid-cols-2'} gap-12 items-center`}>
           {/* Text Content */}
           <div className="space-y-6">
@@ -151,7 +151,7 @@ export function HeroCarousel() {
               <span className="text-white/80 text-sm font-medium">{slide.tag}</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl xl:text-6xl font-bold text-white leading-tight">
+            <h1 className="text-3xl sm:text-4xl xl:text-5xl font-bold text-white leading-tight">
               {slide.title}
             </h1>
 
@@ -162,7 +162,7 @@ export function HeroCarousel() {
               {slide.subtitle}
             </div>
 
-            <p className="text-gray-300 text-lg leading-relaxed max-w-lg">
+            <p className="text-gray-300 text-base leading-relaxed max-w-lg">
               {slide.desc}
             </p>
 

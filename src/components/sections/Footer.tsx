@@ -1,21 +1,47 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import Link from "next/link";
 
 const footerLinks = {
   products: {
     title: "Products",
-    links: ["HDMI Cameras", "VGA Cameras", "Digital Microscopes", "Vision Inspection", "Microscope Cameras", "Smart Cameras"],
+    links: [
+      { name: "3D Microscopes", href: "/products?category=3d-microscopes" },
+      { name: "Metallographic Microscopes", href: "/products?category=metallographic-microscopes" },
+      { name: "Measuring Microscopes", href: "/products?category=measuring-microscopes" },
+      { name: "Electronic Microscopes", href: "/products?category=electronic-microscopes" },
+      { name: "Vision Inspection", href: "/products?category=vision-inspection" },
+      { name: "Thermal Cameras", href: "/products?category=thermal-cameras" },
+    ],
   },
   solutions: {
     title: "Solutions",
-    links: ["Semiconductor", "Lithium Battery", "Automotive", "Food & Pharma", "Logistics", "Printing"],
+    links: [
+      { name: "Microscope Vision", href: "/solutions/microscope" },
+      { name: "Electronics Inspection", href: "/solutions/electronics" },
+      { name: "AI Vision Inspection", href: "/solutions/vision" },
+      { name: "Thermal Imaging", href: "/solutions/thermal" },
+    ],
   },
   support: {
     title: "Support",
-    links: ["Documentation", "SDK Download", "Case Studies", "Video Tutorials", "Forum", "Contact Us"],
+    links: [
+      { name: "Documentation", href: "#" },
+      { name: "SDK Download", href: "#" },
+      { name: "Case Studies", href: "#" },
+      { name: "Video Tutorials", href: "#" },
+      { name: "FAQ", href: "#" },
+      { name: "Contact Us", href: "/about" },
+    ],
   },
   company: {
     title: "Company",
-    links: ["About Us", "News", "Investors", "Careers", "Contact", "Compliance"],
+    links: [
+      { name: "About Us", href: "/about" },
+      { name: "News", href: "#" },
+      { name: "Careers", href: "#" },
+      { name: "Contact", href: "/about" },
+      { name: "Partners", href: "#" },
+    ],
   },
 };
 
@@ -56,13 +82,13 @@ export function Footer() {
               <h4 className="text-gray-900 font-semibold mb-4">{section.title}</h4>
               <ul className="space-y-2">
                 {section.links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
                       className="text-gray-500 hover:text-gray-700 text-sm transition-colors"
                     >
-                      {link}
-                    </a>
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>

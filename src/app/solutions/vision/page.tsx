@@ -5,6 +5,7 @@ import { Footer } from "@/components/sections/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import {
   Brain,
   Eye,
@@ -29,6 +30,7 @@ const solutionData = {
       id: "defect",
       title: "Defect Detection",
       icon: Eye,
+      image: "/images/solutions/vision-defect-detection.png",
       desc: "Automatically identify scratches, stains, cracks and other defects on product surfaces",
       benefits: [
         "Deep learning algorithms, adaptive to various defects",
@@ -41,6 +43,7 @@ const solutionData = {
       id: "positioning",
       title: "Positioning Recognition",
       icon: Target,
+      image: "/images/scenarios/robot-vision.jpg",
       desc: "Precisely locate part positions to guide robotic assembly",
       benefits: [
         "Positioning accuracy ±0.05mm",
@@ -53,6 +56,7 @@ const solutionData = {
       id: "measurement",
       title: "Dimension Measurement",
       icon: Zap,
+      image: "/images/scenarios/welding-automation.jpg",
       desc: "High-precision measurement of product dimensions, spacing, and angles",
       benefits: [
         "Sub-pixel measurement accuracy",
@@ -66,6 +70,7 @@ const solutionData = {
     {
       type: "Smart Vision Camera",
       icon: Brain,
+      image: "/images/products/ut-smartgo/main.jpg",
       bestFor: "Appearance inspection, color recognition, complex scenes",
       features: [
         "Color imaging, support color analysis",
@@ -82,6 +87,7 @@ const solutionData = {
     {
       type: "AOI Inspection System",
       icon: Eye,
+      image: "/images/products/ut-a100/main.jpg",
       bestFor: "Automated inspection, batch testing, production lines",
       features: [
         "One-button automatic measurement",
@@ -139,8 +145,19 @@ export default function VisionSolutionPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-gray-50 to-green-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="relative pt-24 pb-16 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/solutions/vision-hero.png"
+            alt="AI Vision Solutions"
+            fill
+            className="object-cover opacity-20"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-50/90 to-green-50/90" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center max-w-4xl mx-auto">
             <Badge className="bg-green-100 text-green-700 border-green-200 mb-6">
               Industry Solutions
@@ -169,7 +186,7 @@ export default function VisionSolutionPage() {
                 <Phone className="w-5 h-5 mr-2" />
                 Get Solution Quote
               </Button>
-              <Button variant="outline" className="h-12 px-8">
+              <Button variant="outline" className="h-12 px-8 bg-white/80">
                 <Mail className="w-5 h-5 mr-2" />
                 Technical Consultation
               </Button>
@@ -187,21 +204,22 @@ export default function VisionSolutionPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {solutionData.comparison.map((item, idx) => {
-              const Icon = item.icon;
-              return (
-                <Card key={idx} className="border-gray-200 shadow-sm">
-                  <CardContent className="p-8">
-                    <div className="flex items-center gap-3 mb-6">
-                      <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center">
-                        <Icon className="w-6 h-6 text-green-600" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900">{item.type}</h3>
-                        <p className="text-green-600 text-sm">{item.bestFor}</p>
-                      </div>
+            {solutionData.comparison.map((item, idx) => (
+                <Card key={idx} className="border-gray-200 shadow-sm overflow-hidden">
+                  {/* Product Image */}
+                  <div className="relative h-56 w-full bg-gray-100">
+                    <Image
+                      src={item.image}
+                      alt={item.type}
+                      fill
+                      className="object-contain p-4"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent pt-12 pb-4 px-4">
+                      <h3 className="text-xl font-bold text-white">{item.type}</h3>
+                      <p className="text-white/80 text-sm">{item.bestFor}</p>
                     </div>
-
+                  </div>
+                  <CardContent className="p-6">
                     <div className="space-y-3 mb-6">
                       {item.features.map((feature, fidx) => (
                         <div key={fidx} className="flex items-center gap-2 text-gray-700">
@@ -227,8 +245,7 @@ export default function VisionSolutionPage() {
                     </div>
                   </CardContent>
                 </Card>
-              );
-            })}
+            ))}
           </div>
 
           {/* Application Scenarios */}
@@ -239,16 +256,28 @@ export default function VisionSolutionPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {solutionData.scenarios.map((scenario) => {
-              const Icon = scenario.icon;
+              const ScenarioIcon = scenario.icon;
               return (
-                <Card key={scenario.id} className="border-gray-200 shadow-sm hover:shadow-md transition-shadow">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center">
-                        <Icon className="w-5 h-5 text-green-600" />
+                <Card key={scenario.id} className="border-gray-200 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+                  {/* Scenario Image */}
+                  <div className="relative h-40 w-full">
+                    <Image
+                      src={scenario.image}
+                      alt={scenario.title}
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute bottom-3 left-4 right-4">
+                      <div className="flex items-center gap-2">
+                        <div className="w-8 h-8 rounded-lg bg-white/90 flex items-center justify-center">
+                          <ScenarioIcon className="w-4 h-4 text-green-600" />
+                        </div>
+                        <h4 className="text-lg font-bold text-white">{scenario.title}</h4>
                       </div>
-                      <h4 className="text-lg font-bold text-gray-900">{scenario.title}</h4>
                     </div>
+                  </div>
+                  <CardContent className="p-6">
                     <p className="text-gray-600 text-sm mb-4">{scenario.desc}</p>
                     
                     <div className="space-y-2 mb-4">

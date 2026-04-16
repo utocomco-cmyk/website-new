@@ -1,71 +1,47 @@
 import { Card } from "@/components/ui/card";
-import { Cpu, Battery, Car, Pill, Package, Palette } from "lucide-react";
+import Image from "next/image";
 
 const applications = [
   {
     id: 1,
     title: "Semiconductor",
-    icon: Cpu,
+    image: "/images/industries/01-semiconductor.jpg",
     desc: "Wafer defect detection, chip packaging inspection, PCB surface inspection with sub-micron precision",
-    color: "from-blue-50 to-blue-100",
-    border: "border-blue-200",
-    iconBg: "bg-blue-100",
-    iconColor: "text-blue-600",
     cases: ["Wafer Defect", "Chip Packaging", "PCB Inspection"],
   },
   {
     id: 2,
     title: "Battery Manufacturing",
-    icon: Battery,
+    image: "/images/industries/02-battery.jpg",
     desc: "Electrode coating inspection, cell assembly guidance, module appearance defect detection",
-    color: "from-green-50 to-green-100",
-    border: "border-green-200",
-    iconBg: "bg-green-100",
-    iconColor: "text-green-600",
     cases: ["Coating Inspection", "Cell Assembly", "Module Check"],
   },
   {
     id: 3,
     title: "Automotive",
-    icon: Car,
+    image: "/images/industries/03-automotive.jpg",
     desc: "Body weld inspection, component dimension measurement, assembly line vision guidance",
-    color: "from-orange-50 to-orange-100",
-    border: "border-orange-200",
-    iconBg: "bg-orange-100",
-    iconColor: "text-orange-600",
     cases: ["Weld Inspection", "Measurement", "Assembly Guide"],
   },
   {
     id: 4,
     title: "Food & Pharma",
-    icon: Pill,
+    image: "/images/industries/04-foodpharma.jpg",
     desc: "Package integrity inspection, barcode/label recognition, foreign object detection",
-    color: "from-pink-50 to-pink-100",
-    border: "border-pink-200",
-    iconBg: "bg-pink-100",
-    iconColor: "text-pink-600",
     cases: ["Package Check", "Barcode Scan", "Foreign Object"],
   },
   {
     id: 5,
     title: "Logistics",
-    icon: Package,
+    image: "/images/industries/05-logistics.jpg",
     desc: "High-speed barcode reading, package dimension measurement, sorting robot guidance",
-    color: "from-yellow-50 to-yellow-100",
-    border: "border-yellow-200",
-    iconBg: "bg-yellow-100",
-    iconColor: "text-yellow-600",
     cases: ["Barcode Read", "Dimension", "Robot Guide"],
   },
   {
     id: 6,
     title: "Printing & Textile",
-    icon: Palette,
+    image: "/images/industries/06-printing.jpg",
     desc: "Print quality inspection, color deviation analysis, fabric defect detection",
-    color: "from-purple-50 to-purple-100",
-    border: "border-purple-200",
-    iconBg: "bg-purple-100",
-    iconColor: "text-purple-600",
     cases: ["Print Check", "Color Analysis", "Defect Detection"],
   },
 ];
@@ -87,39 +63,48 @@ export function ApplicationSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {applications.map((app) => {
-            const Icon = app.icon;
-            return (
-              <Card
-                key={app.id}
-                className={`group relative rounded-2xl border ${app.border} bg-gradient-to-br ${app.color} p-6 cursor-pointer hover:scale-[1.02] transition-all duration-300 hover:shadow-lg`}
-              >
-                <div className={`w-12 h-12 rounded-xl ${app.iconBg} flex items-center justify-center mb-4`}>
-                  <Icon className={`w-6 h-6 ${app.iconColor}`} />
-                </div>
-                <h3 className="text-gray-900 font-bold text-xl mb-2">{app.title}</h3>
+          {applications.map((app) => (
+            <Card
+              key={app.id}
+              className="group relative rounded-2xl border border-gray-200 overflow-hidden cursor-pointer hover:scale-[1.02] transition-all duration-300 hover:shadow-lg"
+            >
+              {/* Background Image */}
+              <div className="relative h-48 w-full overflow-hidden">
+                <Image
+                  src={app.image}
+                  alt={app.title}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                <h3 className="absolute bottom-4 left-4 text-white font-bold text-xl">
+                  {app.title}
+                </h3>
+              </div>
+
+              <div className="p-5">
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">{app.desc}</p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {app.cases.map((c) => (
                     <span
                       key={c}
-                      className="px-2 py-1 rounded-lg text-xs bg-white/80 text-gray-600 border border-gray-200"
+                      className="px-2 py-1 rounded-lg text-xs bg-violet-50 text-violet-600 border border-violet-200"
                     >
                       ✓ {c}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between pt-2 border-t border-gray-100">
                   <span className="text-gray-500 text-sm">View Solution</span>
-                  <span className="text-gray-900 group-hover:translate-x-1 transition-transform inline-block">
+                  <span className="text-violet-600 group-hover:translate-x-1 transition-transform inline-block">
                     →
                   </span>
                 </div>
-              </Card>
-            );
-          })}
+              </div>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

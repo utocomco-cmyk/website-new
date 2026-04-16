@@ -27,13 +27,13 @@ export default function PCBInspectionPage() {
       <div className="pt-24 pb-4 bg-gray-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <nav className="flex items-center gap-2 text-sm text-gray-500">
-            <Link href="/" className="hover:text-gray-900">首页</Link>
+            <Link href="/" className="hover:text-gray-900">Home</Link>
             <span>/</span>
-            <Link href="/solutions" className="hover:text-gray-900">解决方案</Link>
+            <Link href="/solutions" className="hover:text-gray-900">Solutions</Link>
             <span>/</span>
-            <Link href="/solutions/electronics" className="hover:text-gray-900">电子产线检测</Link>
+            <Link href="/solutions/electronics" className="hover:text-gray-900">Electronics Inspection</Link>
             <span>/</span>
-            <span className="text-gray-900">PCB 焊点检测</span>
+            <span className="text-gray-900">PCB Solder Joint Inspection</span>
           </nav>
         </div>
       </div>
@@ -43,38 +43,39 @@ export default function PCBInspectionPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="bg-blue-100 text-blue-700 mb-4">应用场景</Badge>
+              <Badge className="bg-blue-100 text-blue-700 mb-4">Application Scenario</Badge>
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                PCB 焊点检测方案
+                PCB Solder Joint Inspection Solution
               </h1>
               <p className="text-xl text-gray-600 mb-6">
-                针对 SMT 产线焊点质量检测，提供 HDMI 实时观察与 AI 自动检测双模方案，
-                有效识别虚焊、短路、缺焊等缺陷
+                For SMT production line solder joint quality inspection, providing HDMI real-time observation 
+                and AI automatic detection dual-mode solution, effectively identifying cold joints, shorts, 
+                and missing solder defects.
               </p>
-              
+
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center gap-2 text-gray-700">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>检测准确率 99.5%</span>
+                  <span>99.5% Detection Accuracy</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-700">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>检测速度 &lt;50ms</span>
+                  <span>&lt;50ms Detection Speed</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-700">
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>即插即用，无需电脑</span>
+                  <span>Plug-and-play, No PC Required</span>
                 </div>
               </div>
 
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-blue-600 hover:bg-blue-700 h-12 px-8">
                   <Phone className="w-5 h-5 mr-2" />
-                  获取方案报价
+                  Get Quote
                 </Button>
                 <Button variant="outline" className="h-12 px-8">
                   <Mail className="w-5 h-5 mr-2" />
-                  申请试用
+                  Request Trial
                 </Button>
               </div>
             </div>

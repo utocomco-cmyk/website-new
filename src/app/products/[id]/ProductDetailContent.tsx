@@ -24,7 +24,14 @@ interface ProductDetailContentProps {
 
 export function ProductDetailContent({ product }: ProductDetailContentProps) {
   const [selectedImage, setSelectedImage] = useState(0);
-  const productImages = product.images?.filter((img): img is string => typeof img === 'string') || [];
+  // 使用 product.images 数组，如果没有则回退到单张图片
+  const allImages = product.images && product.images.length > 0 
+    ? product.images 
+    : (product.image ? [product.image] : []);
+  
+  // 分离画廊图片（前3张）和详情图片（后面的）
+  const galleryImages = allImages.slice(0, 3);
+  const detailImages = allImages.slice(3);
 
   return (
     <div className="min-h-screen bg-white">
@@ -55,9 +62,9 @@ export function ProductDetailContent({ product }: ProductDetailContentProps) {
             <div className="space-y-4">
               {/* Main Image */}
               <div className="relative aspect-square bg-gray-50 rounded-2xl flex items-center justify-center overflow-hidden border border-gray-200">
-                {productImages.length > 0 && productImages[selectedImage] ? (
+                {galleryImages.length > 0 && galleryImages[selectedImage] ? (
                   <Image
-                    src={productImages[selectedImage]}
+                    src={galleryImages[selectedImage]}
                     alt={product.name}
                     fill
                     className="object-contain p-8"
@@ -79,9 +86,9 @@ export function ProductDetailContent({ product }: ProductDetailContentProps) {
               </div>
               
               {/* Thumbnail Gallery */}
-              {productImages.length > 1 && (
+              {galleryImages.length > 1 && (
                 <div className="flex gap-2 overflow-x-auto pb-2">
-                  {productImages.map((img, idx) => (
+                  {galleryImages.map((img, idx) => (
                     <button
                       key={idx}
                       onClick={() => setSelectedImage(idx)}
@@ -108,7 +115,11 @@ export function ProductDetailContent({ product }: ProductDetailContentProps) {
                 <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
                   {product.name}
                 </h1>
-                <div className="text-gray-500">Model: {product.model}</div>
+                <div className="text-gray-500 mb-4">Model: {product.model}</div>
+                {/* Product Description */}
+                <div className="p-4 bg-gray-50 rounded-lg border border-gray-100">
+                  <p className="text-gray-600 leading-relaxed">{product.description}</p>
+                </div>
               </div>
 
               {/* Rating */}
@@ -141,16 +152,11 @@ export function ProductDetailContent({ product }: ProductDetailContentProps) {
                 </div>
               </div>
 
-              {/* Quick Specs */}
+              {/* Quick Specs - 只显示 Excel 中有的参数 */}
               <div className="grid grid-cols-2 gap-4">
-                {[
-                  ["Resolution", product.resolution],
-                  ["Interface", product.interface],
-                  ["Shutter", product.shutter],
-                  ["Frame Rate", product.fps],
-                ].map(([label, value]) => (
-                  <div key={label} className="bg-gray-50 rounded-lg p-3 border border-gray-100">
-                    <div className="text-gray-500 text-xs">{label}</div>
+                {product.specs && Object.entries(product.specs).slice(0, 4).map(([key, value]) => (
+                  <div key={key} className="bg-gray-50 rounded-lg p-3 border border-gray-100">
+                    <div className="text-gray-500 text-xs">{key}</div>
                     <div className="text-gray-900 font-medium">{value}</div>
                   </div>
                 ))}
@@ -202,37 +208,21 @@ export function ProductDetailContent({ product }: ProductDetailContentProps) {
 
       {/* Product Details Sections */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
-        {/* Product Detail Section - 显示完整详情页图片 */}
-        {product.images && product.images.length > 2 && (
-          <Card className="bg-white border-gray-200 mb-8 shadow-sm">
-            <CardContent className="p-8">
-              <h3 className="text-gray-900 font-bold text-2xl mb-8">Product Details</h3>
-              <div className="relative w-full bg-gray-50 rounded-xl overflow-hidden" style={{ minHeight: '1400px' }}>
-                <Image
-                  src={product.images[product.images.length - 1]}
-                  alt={`${product.name} - Product Details`}
-                  fill
-                  className="object-contain p-4"
-                  sizes="(max-width: 1200px) 100vw, 1200px"
-                />
-              </div>
-            </CardContent>
-          </Card>
-        )}
 
-        {/* Specs Image Section - 额外的详情图片 */}
-        {product.images && product.images.length > 4 && (
+        {/* Product Detail Images Section */}
+        {detailImages.length > 0 && (
           <Card className="bg-white border-gray-200 mb-8 shadow-sm">
-            <CardContent className="p-8">
+            <CardContent className="p-6">
+              <h3 className="text-gray-900 font-bold text-xl mb-6">Product Details</h3>
               <div className="space-y-8">
-                {product.images.slice(4).map((img, idx) => (
-                  <div key={idx} className="relative w-full bg-gray-50 rounded-xl overflow-hidden" style={{ minHeight: '900px' }}>
+                {detailImages.map((img, idx) => (
+                  <div key={idx} className="relative w-full overflow-hidden rounded-lg border border-gray-200">
                     <Image
                       src={img}
                       alt={`${product.name} - Detail ${idx + 1}`}
-                      fill
-                      className="object-contain p-4"
-                      sizes="(max-width: 1200px) 100vw, 1200px"
+                      width={1200}
+                      height={800}
+                      className="w-full h-auto object-contain"
                     />
                   </div>
                 ))}
@@ -255,26 +245,6 @@ export function ProductDetailContent({ product }: ProductDetailContentProps) {
                   <span className="text-gray-900 font-medium">{value}</span>
                 </div>
               ))}
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Features Section */}
-        <Card className="bg-white border-gray-200 mb-8 shadow-sm">
-          <CardContent className="p-6">
-            <h3 className="text-gray-900 font-bold text-xl mb-6">Product Features</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {product.features.map((feature, idx) => (
-                <div key={idx} className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-4 h-4 text-blue-600" />
-                  </div>
-                  <span className="text-gray-700">{feature}</span>
-                </div>
-              ))}
-            </div>
-            <div className="mt-8 p-4 bg-gray-50 rounded-lg">
-              <p className="text-gray-600 leading-relaxed">{product.description}</p>
             </div>
           </CardContent>
         </Card>
