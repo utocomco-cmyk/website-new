@@ -1,51 +1,56 @@
+"use client";
+
 import { Phone, Mail, MapPin } from "lucide-react";
 import Link from "next/link";
-
-const footerLinks = {
-  products: {
-    title: "Products",
-    links: [
-      { name: "3D Microscopes", href: "/products?category=3d-microscopes" },
-      { name: "Metallographic Microscopes", href: "/products?category=metallographic-microscopes" },
-      { name: "Measuring Microscopes", href: "/products?category=measuring-microscopes" },
-      { name: "Electronic Microscopes", href: "/products?category=electronic-microscopes" },
-      { name: "Vision Inspection", href: "/products?category=vision-inspection" },
-      { name: "Thermal Cameras", href: "/products?category=thermal-cameras" },
-    ],
-  },
-  solutions: {
-    title: "Solutions",
-    links: [
-      { name: "Microscope Vision", href: "/solutions/microscope" },
-      { name: "Electronics Inspection", href: "/solutions/electronics" },
-      { name: "AI Vision Inspection", href: "/solutions/vision" },
-      { name: "Thermal Imaging", href: "/solutions/thermal" },
-    ],
-  },
-  support: {
-    title: "Support",
-    links: [
-      { name: "Documentation", href: "#" },
-      { name: "SDK Download", href: "#" },
-      { name: "Case Studies", href: "#" },
-      { name: "Video Tutorials", href: "#" },
-      { name: "FAQ", href: "#" },
-      { name: "Contact Us", href: "/about" },
-    ],
-  },
-  company: {
-    title: "Company",
-    links: [
-      { name: "About Us", href: "/about" },
-      { name: "News", href: "#" },
-      { name: "Careers", href: "#" },
-      { name: "Contact", href: "/about" },
-      { name: "Partners", href: "#" },
-    ],
-  },
-};
+import { useTranslation } from "@/components/LanguageSwitcher";
 
 export function Footer() {
+  const { t } = useTranslation();
+  
+  const footerLinks = {
+    products: {
+      title: t.products || "Products",
+      links: [
+        { name: "3D Microscopes", href: "/products?category=3d-microscopes" },
+        { name: "Metallographic Microscopes", href: "/products?category=metallographic-microscopes" },
+        { name: "Measuring Microscopes", href: "/products?category=measuring-microscopes" },
+        { name: "Electronic Microscopes", href: "/products?category=electronic-microscopes" },
+        { name: "Vision Inspection", href: "/products?category=vision-inspection" },
+        { name: "Thermal Cameras", href: "/products?category=thermal-cameras" },
+      ],
+    },
+    solutions: {
+      title: t.solutions || "Solutions",
+      links: [
+        { name: "Microscope Vision", href: "/solutions/microscope" },
+        { name: "Electronics Inspection", href: "/solutions/electronics" },
+        { name: "AI Vision Inspection", href: "/solutions/vision" },
+        { name: "Thermal Imaging", href: "/solutions/thermal" },
+      ],
+    },
+    support: {
+      title: t.support || "Support",
+      links: [
+        { name: "Documentation", href: "#" },
+        { name: "SDK Download", href: "#" },
+        { name: "Case Studies", href: "#" },
+        { name: "Video Tutorials", href: "#" },
+        { name: "FAQ", href: "#" },
+        { name: t.contactUs || "Contact Us", href: "/about" },
+      ],
+    },
+    company: {
+      title: t.about || "Company",
+      links: [
+        { name: t.about || "About Us", href: "/about" },
+        { name: "News", href: "#" },
+        { name: "Careers", href: "#" },
+        { name: t.contactUs || "Contact", href: "/about" },
+        { name: "Partners", href: "#" },
+      ],
+    },
+  };
+
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
@@ -61,19 +66,9 @@ export function Footer() {
                 <div className="text-blue-600 text-xs">Industrial Vision</div>
               </div>
             </div>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              20 years of expertise in industrial vision, providing high-performance industrial cameras, vision algorithms, and intelligent solutions for smart manufacturing.
+            <p className="text-gray-600 text-sm leading-relaxed">
+              {t.description || "20 years of expertise in industrial vision, providing high-performance industrial cameras, vision algorithms, and intelligent solutions for smart manufacturing."}
             </p>
-            <div className="flex gap-3">
-              {["LinkedIn", "YouTube", "Twitter", "Facebook"].map((social) => (
-                <button
-                  key={social}
-                  className="w-8 h-8 rounded-lg bg-gray-100 hover:bg-gray-200 border border-gray-200 text-gray-600 text-xs transition-colors flex items-center justify-center"
-                >
-                  {social[0]}
-                </button>
-              ))}
-            </div>
           </div>
 
           {/* Links */}

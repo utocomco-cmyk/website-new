@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "solutions": "Solutions",
+    "support": "Support",
+    "about": "About",
+    "search": "Search",
+    "getQuote": "Get Quote"
+  },
+  "hero": {
+    "tag1": "Industrial Inspection",
+    "title1": "Precision Vision Solutions",
+    "subtitle1": "PCB Inspection · Semiconductor · Quality Control",
+    "desc1": "Advanced industrial microscopes and vision systems for electronics manufacturing, PCB inspection, and semiconductor quality assurance",
+    "tag2": "Metallographic Analysis",
+    "title2": "Metallographic Microscopes",
+    "subtitle2": "Material Analysis · Metal Inspection · Research Grade",
+    "desc2": "Professional metallographic microscopes for material science, metal analysis, and quality control with 4K resolution and DIC imaging",
+    "tag3": "Smart Vision Inspection",
+    "title3": "AI-Powered Vision Systems",
+    "subtitle3": "AOI Systems · Smart Cameras · Automated Inspection",
+    "desc3": "Intelligent vision inspection systems with AI algorithms for defect detection, measurement, and quality assurance in manufacturing",
+    "exploreProducts": "Explore Products",
+    "viewSolutions": "Solutions",
+    "yearsExperience": "Years Experience",
+    "microscopeModels": "Microscope Models",
+    "productCategories": "Product Categories",
+    "satisfactionRate": "Satisfaction Rate"
+  },
+  "footer": {
+    "description": "20 years of expertise in industrial vision, providing high-performance industrial cameras, vision algorithms, and intelligent solutions for smart manufacturing.",
+    "products": "Products",
+    "solutions": "Solutions",
+    "support": "Support",
+    "company": "Company",
+    "salesHotline": "Sales Hotline",
+    "email": "Email",
+    "headquarters": "Headquarters",
+    "copyright": "© 2024 Qingdao Utocom Co., Ltd. All Rights Reserved",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookieSettings": "Cookie Settings",
+    "legal": "Legal"
+  },
+  "language": {
+    "title": "Language",
+    "en": "English",
+    "ru": "Русский",
+    "hi": "हिन्दी",
+    "es": "Español",
+    "de": "Deutsch",
+    "ar": "العربية"
+  }
+}

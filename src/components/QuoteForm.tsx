@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -14,6 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Check, Loader2 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface QuoteFormProps {
   buttonText?: string;
@@ -94,13 +94,18 @@ export function QuoteForm({
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger
         render={
-          <Button
-            variant={buttonVariant}
-            className={buttonClassName}
+          <button
+            className={cn(
+              "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50",
+              buttonVariant === "default" && "bg-blue-600 text-white hover:bg-blue-700",
+              buttonVariant === "outline" && "border border-gray-300 bg-white text-gray-700 hover:bg-gray-50",
+              buttonVariant === "secondary" && "bg-gray-100 text-gray-900 hover:bg-gray-200",
+              buttonClassName
+            )}
           >
-            <Phone className="w-4 h-4 mr-2" />
+            <Phone className="w-4 h-4" />
             {buttonText}
-          </Button>
+          </button>
         }
       />
       <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto">
@@ -212,20 +217,20 @@ export function QuoteForm({
               />
             </div>
 
-            <Button 
+            <button 
               type="submit" 
-              className="w-full bg-blue-600 hover:bg-blue-700 h-12"
+              className="w-full bg-blue-600 hover:bg-blue-700 h-12 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium text-white transition-all disabled:pointer-events-none disabled:opacity-50"
               disabled={loading}
             >
               {loading ? (
                 <>
-                  <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                  <Loader2 className="w-4 h-4 animate-spin" />
                   Submitting...
                 </>
               ) : (
                 "Submit Quote Request"
               )}
-            </Button>
+            </button>
 
             <p className="text-xs text-gray-500 text-center">
               By submitting, you agree to our Privacy Policy. We are committed to protecting your personal information.

@@ -8,6 +8,7 @@ import { ProductFilter } from "./ProductFilter";
 import { products, categories } from "./data";
 import { SlidersHorizontal, Grid3X3, List } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "@/components/LanguageSwitcher";
 import {
   Sheet,
   SheetContent,
@@ -38,6 +39,8 @@ export function ProductsContent() {
     }
   });
 
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -48,10 +51,10 @@ export function ProductsContent() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">
-                Products
+                {t.products || "Products"}
               </h1>
               <p className="text-blue-100">
-                {sortedProducts.length} products covering all machine vision applications
+                {sortedProducts.length} {t.products || "products"} {t.coveringAll || "covering all machine vision applications"}
               </p>
             </div>
 
@@ -63,12 +66,12 @@ export function ProductsContent() {
                   className="md:hidden border-white/30 text-white hover:bg-white/10"
                 >
                   <SlidersHorizontal className="w-4 h-4 mr-2" />
-                  Filter
+                  {t.filter || "Filter"}
                 </Button>
               </SheetTrigger>
               <SheetContent side="left" className="bg-white border-gray-200 w-[300px]">
                 <SheetHeader>
-                  <SheetTitle className="text-gray-900">Filter Products</SheetTitle>
+                  <SheetTitle className="text-gray-900">{t.filterProducts || "Filter Products"}</SheetTitle>
                 </SheetHeader>
                 <div className="mt-6">
                   <ProductFilter

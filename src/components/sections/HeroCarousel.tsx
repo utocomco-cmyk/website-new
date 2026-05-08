@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "@/components/LanguageSwitcher";
 
 const slides = [
   {
@@ -91,6 +92,7 @@ export function HeroCarousel() {
   }, [nextSlide]);
 
   const slide = slides[current];
+  const { t } = useTranslation();
 
   return (
     <section className="relative min-h-[550px] overflow-hidden">
@@ -175,16 +177,19 @@ export function HeroCarousel() {
                     boxShadow: `0 8px 32px ${slide.accent}40`,
                   }}
                 >
-                  Products
+                  {t.products || "Products"}
                   <ChevronRight className="w-4 h-4 ml-1" />
                 </Button>
               </Link>
               <Link href="/solutions">
                 <Button
-                  variant="outline"
-                  className="px-6 py-3 h-auto rounded-xl text-white/80 font-medium border-white/20 hover:border-white/40 hover:bg-white/5 transition-all"
+                  className="px-6 py-3 h-auto rounded-xl font-semibold transition-all hover:scale-105 active:scale-95 bg-white text-blue-600 hover:bg-blue-50"
+                  style={{
+                    boxShadow: `0 4px 20px rgba(255, 255, 255, 0.3)`,
+                  }}
                 >
-                  Solutions
+                  {t.solutions || "Solutions"}
+                  <ChevronRight className="w-4 h-4 ml-1" />
                 </Button>
               </Link>
             </div>

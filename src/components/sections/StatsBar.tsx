@@ -1,11 +1,17 @@
-export const stats = [
-  { value: "20+", label: "Years Experience" },
-  { value: "3000+", label: "Product Models" },
-  { value: "50,000+", label: "Enterprise Clients" },
-  { value: "98.6%", label: "Satisfaction Rate" },
-];
+"use client";
+
+import { useTranslation } from "@/components/LanguageSwitcher";
 
 export function StatsBar() {
+  const { t } = useTranslation();
+
+  const stats = [
+    { value: "20+", label: t.yearsExperience || "Years Experience" },
+    { value: "3000+", label: t.productModels || "Product Models" },
+    { value: "50,000+", label: t.enterpriseClients || "Enterprise Clients" },
+    { value: "98.6%", label: t.satisfactionRate || "Satisfaction Rate" },
+  ];
+
   return (
     <section className="py-8 bg-gray-50 border-y border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">

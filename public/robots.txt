@@ -1,13 +1,37 @@
+# robots.txt for Utocom website
+# https://www.utocom.com
+
 User-agent: *
 Allow: /
 
 # Sitemap
 Sitemap: https://www.utocom.com/sitemap.xml
 
-# Disallow admin and private pages
+# Crawl-delay
+Crawl-delay: 10
+
+# Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /private/
+Disallow: /temp/
 
-# Crawl-delay for bots
+# Allow search engines to index everything else
+Allow: /products/
+Allow: /solutions/
+Allow: /about/
+Allow: /support/
+Allow: /images/
+
+# Special rules for specific bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 5
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 10
+
+User-agent: Baiduspider
+Allow: /
 Crawl-delay: 10

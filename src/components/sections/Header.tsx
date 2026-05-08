@@ -7,13 +7,14 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Search } from "lucide-react";
 import Link from "next/link";
 import { QuoteForm } from "@/components/QuoteForm";
+import { LanguageSwitcher, useTranslation } from "@/components/LanguageSwitcher";
 
-const navItems = [
-  { name: "Home", href: "/" },
-  { name: "Products", href: "/products" },
-  { name: "Solutions", href: "/solutions" },
-  { name: "Support", href: "/support" },
-  { name: "About", href: "/about" },
+const getNavItems = (t: Record<string, string>) => [
+  { name: t.home || "Home", href: "/" },
+  { name: t.products || "Products", href: "/products" },
+  { name: t.solutions || "Solutions", href: "/solutions" },
+  { name: t.support || "Support", href: "/support" },
+  { name: t.about || "About", href: "/about" },
 ];
 
 export function Header() {
@@ -35,6 +36,9 @@ export function Header() {
     }
     return pathname.startsWith(href);
   };
+
+  const { t } = useTranslation();
+  const navItems = getNavItems(t);
 
   return (
     <header
@@ -93,6 +97,11 @@ export function Header() {
               buttonClassName="hidden md:flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white"
               source="header"
             />
+            
+            {/* Language Switcher */}
+            <div className={scrolled ? "text-gray-600" : "text-white"}>
+              <LanguageSwitcher />
+            </div>
 
             {/* Mobile Menu */}
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
